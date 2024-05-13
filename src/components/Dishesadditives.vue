@@ -1,25 +1,25 @@
 <template>
- <section class="firstsec">
+ <section class="main-container">
         <img class="headerpic" src="../assets/Waakyeplate 1.png">
     </section>
 
     
-    <section class="secsec">
-        <div class="masid">
-            <div class="ma">
+    <section class="second-sec">
+        <div class="selection-zone">
+            <div class="text-1">
               <p >
                   Main
                </p>
             </div>
 
-            <div class="sid">
+            <div class="text-2">
                <p >
                   Sides
               </p>
             </div>
 
 
-        <button class="cO">
+        <button class="order">
             Create Order
         </button>
 
@@ -40,7 +40,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.firstsec{
+.main-container{
             border: 1px solid black;
             background-color: rgb(31, 31, 70);
             align-content:space-between;
@@ -48,10 +48,10 @@ export default {
         .headerpic{
             width: 100%;
         }
-        .secsec{
+        .second-sec{
            background-color: rgb(31, 31, 70); 
         }
-        .masid{
+        .selection-zone{
             display: flex;
             gap: 220px;
             flex-direction: column;
@@ -60,14 +60,14 @@ export default {
             padding: 20px;  
             border-radius: 30px;
         }
-        .ma, .sid{
+        .text-1, .text-2{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
             font-weight: 550;
             color: rgb(31, 31, 70);
             
         }
-        .cO{
+        .order{
             font-family: Arial, Helvetica, sans-serif; 
             font-size: 25px; 
             border-radius: 20px;
