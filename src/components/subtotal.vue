@@ -1,21 +1,21 @@
 <template>
- <section class="firsSec">
-        <div class="pag"></div>
-        <div class="pag"></div>
-        <div class="pag"></div>
-        <div class="pag"></div>
+ <section class="first-container">
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
     </section>
 
-    <section class="seconsec">
+    <section class="second-container">
         <div>
             <p>Subtotal</p>
             <p>Delivery</p>
         </div>
 
-        <div class="boxcon">
-            <div  class="smbx">
+        <div class="lastzone">
+            <div  class="small-box">
             </div>
-            <button class="con">Confirm</button>
+            <button class="pay">Confirm</button>
         </div>
         
 
@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- .firsSec{
+ .first-container{
             display: flex;
             gap: 10px;
             flex-direction: column;
@@ -43,23 +43,23 @@ export default {
             background-color:rgb(31, 31, 70) ;
           
         }
-        .pag{
+        .leaf{
             border: 1px solid black;
             padding: 50px;
             background-color: rgb(225, 227, 230);
         }
-        .seconsec{
+        .second-container{
             border: 1px solid black;
             padding: 10px; 
             background-color:  rgb(225, 227, 230); 
         }
-        .boxcon{
+        .lastzone{
             display: flex;
             align-content: space-around;
             gap: 150px;
             border: 1px solid black;
         }
-        .smbx{
+        .small-box{
             border: 1px solid black;
             width: 50px;
             padding: 20px;
@@ -67,7 +67,7 @@ export default {
             color: white; border: 1px solid black;
             border-radius: 10px;
         }
-        .con{
+        .pay{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 13px;
             font-weight: 550;
