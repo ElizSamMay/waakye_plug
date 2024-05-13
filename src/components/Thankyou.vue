@@ -1,24 +1,24 @@
 <template>
-<section class="fs">
+<section class="first-container">
         <div>
-            <img class="ty" src="../assets/thank 1.png">
+            <img class="thanks-logo" src="../assets/thank 1.png">
         </div>
     </section>
 
-    <section class="ss">
+    <section class="second-container">
       <div>
-        <p class="Orpl">
+        <p class="palce-order">
             Order Placed
         </p>
-        <p class="sth">
+        <p class="text">
             Stay hooked, We will call you once order is 
            accepted and the rider sets off on his way to your location.
            Payment will be made to the rider once item is delivered.
         </p>
     </div>
 
-    <div class="butt">
-        <button class="dn">
+    <div class="buttom-button">
+        <button class="text1">
             Done
         </button>
       </div>  
@@ -36,40 +36,40 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-   .fs{
+   .first-container{
             border: 1px solid black;
             padding: 50px;
             background-color:rgb(31, 31, 70) ;
         }
         
-        .ty{
+        .thanks-logo{
             width: 100%;
         }
-        .ss{
+        .second-container{
             border: 1px solid black;
             padding: 20px;
             background-color:rgb(31, 31, 70) ;
         }
-        .Orpl{
+        .palce-order{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 25px;
             text-align: center;
             color: white;
         }
-        .sth{
+        .text{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: 550;
             color: white;
             margin-bottom: 300px;
         }
-        .butt{
+        .buttom-button{
             border: 1px solid black;
              padding: 10px;  
             position:relative;
             
         }
-        .dn{
+        .text1{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: 550;
