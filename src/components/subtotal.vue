@@ -15,21 +15,22 @@
         <div class="boxcon">
             <div  class="smbx">
             </div>
-            <button class="con">Confirm</button>
+            <button class="con" @click="handleStartButtonTapped">Confirm</button>
         </div>
         
 
     </section>
     
 </template>
+<script setup>
+    import {useRouter} from 'vue-router'
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+    const router = useRouter()
+
+    function handleStartButtonTapped(){
+        router.push('/thank-you')
+    }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

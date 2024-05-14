@@ -1,22 +1,24 @@
+
+
+
 <template>
-  
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view></router-view>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+  import { RouterView } from 'vue-router';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+
 </script>
 
 <style>
 #app {
   background-color: rgb(31, 31, 70);
   height: 100vh;
+}
+
+router-view {
+  width: 100%;
+  height: 100%;
 }
 </style>
