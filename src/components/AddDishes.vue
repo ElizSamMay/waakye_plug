@@ -45,6 +45,7 @@ function createOrder(){
         <div class="packs">
             <div v-for="combo in combos" :key="combo.title">
                 <WaakyePack :pack="combo" @pack-tapped="(args)=>handlePackTapped(args)"/>
+                  
             </div>
         </div>
            
