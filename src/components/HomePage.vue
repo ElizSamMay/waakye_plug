@@ -1,3 +1,18 @@
+<script setup>
+    import {useRouter} from 'vue-router'
+   
+
+    const router = useRouter()
+
+
+    function handleStartButtonTapped(){
+        router.push('/add-dishes')
+    }
+
+</script>
+
+
+
 <template>
  
   <div class="main-container">
@@ -30,7 +45,7 @@
     <section class="lastSec">
 
         <div class="bottom-button"> 
-            <button>Get Waakye</button>
+            <button @click="handleStartButtonTapped">Get Waakye</button>
         </div>
 
     </section>
@@ -41,14 +56,7 @@
     
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
