@@ -1,21 +1,28 @@
 
 <script setup> 
-import {useRouter} from 'vue-router'
+// import {useRouter} from 'vue-router'
 import { waakyeCombos } from '../model/waakye_combo.js'
-import WaakyePack from './WaakyePack.vue'
+import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
+import SubTotal from "@/components/SubTotal.vue"
 import {ref} from 'vue'
 
 let combos = ref(waakyeCombos);
-
-
-const router = useRouter()
+// const router = useRouter()
+const isCustomerSelectionDone = ref(false)
+const comboSelected = ref(combos.value[0])
 
 function createOrder(){
-    router.push('sub-total')
+    console.log(comboSelected);
+    isCustomerSelectionDone.value = true
+}
+
+function goBack(){
+    isCustomerSelectionDone.value = false
 }
 
   function handlePackTapped(args){
     const combo = args[0];
+    comboSelected.value = combo
     for (let i=0; i<combos.value.length; i++){
     if (combos.value[i].id === combo.id){
         combos.value[i].isSelected = !combos.value[i].isSelected
@@ -29,8 +36,7 @@ function createOrder(){
 
 
 <template>
-    
-
+    <div v-if="!isCustomerSelectionDone">
     <section class="image-container">
            <img class="headerpic" src="../assets/Waakyeplate 1.png">
     </section>
@@ -54,7 +60,11 @@ function createOrder(){
        <button class="create-order-button" @click="createOrder">
                Create Order
          </button>
-       
+        </div>
+
+        <div v-else class="sub-total">
+            <SubTotal :combo="comboSelected" @handle-back-tapped="goBack"/>
+        </div>
    </template>
    
   
@@ -121,6 +131,22 @@ function createOrder(){
             gap: 16px;
             padding: 16px;
         }
+
+        .sub-total{
+            min-height: 100%;
+        }
+
+    @media only screen and (max-height: 700px) {
+        .second-sec {
+        height: 150vh;
+    }
+    }
+
+    @media only screen and (max-height: 900px) {
+        .second-sec {
+        height: 110vh;
+    }
+    }
 
    </style>
    
