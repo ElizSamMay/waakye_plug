@@ -12,7 +12,7 @@
         </p></div>
         <div>
         <p class="text">
-            Stay hooked, We will call you once order your is 
+            Stay hooked, We will call you once your order  is 
            accepted and the rider sets off on his way to your location.
            Payment will be made to the rider once item is delivered.
         </p>
