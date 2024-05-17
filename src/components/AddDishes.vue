@@ -9,7 +9,7 @@ import {ref} from 'vue'
 let combos = ref(waakyeCombos);
 // const router = useRouter()
 const isCustomerSelectionDone = ref(false)
-const comboSelected = ref({})
+const comboSelected = ref(combos.value[0])
 
 function createOrder(){
     console.log(comboSelected);
@@ -135,6 +135,18 @@ function goBack(){
         .sub-total{
             min-height: 100%;
         }
+
+    @media only screen and (max-height: 700px) {
+        .second-sec {
+        height: 150vh;
+    }
+    }
+
+    @media only screen and (max-height: 900px) {
+        .second-sec {
+        height: 110vh;
+    }
+    }
 
    </style>
    
