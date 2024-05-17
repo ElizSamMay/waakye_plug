@@ -100,8 +100,8 @@ function goBack(){
 
         .second-sec{
             background-color: white;
-            height: 100vh;
-            overflow-y: scroll;
+            height: 200vh;
+            
         }
 
         .title-and-button{
@@ -138,7 +138,7 @@ function goBack(){
 
     @media only screen and (max-height: 700px) {
         .second-sec {
-        height: 150vh;
+        height: 200vh;
     }
     }
 

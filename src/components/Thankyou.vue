@@ -9,16 +9,17 @@
       <div>
         <p class="palce-order">
             Order Placed
-        </p>
+        </p></div>
+        <div>
         <p class="text">
-            Stay hooked, We will call you once order is 
+            Stay hooked, We will call you once order your is 
            accepted and the rider sets off on his way to your location.
            Payment will be made to the rider once item is delivered.
         </p>
     </div>
 
-    <div class="buttom-button">
-        <button class="text1">
+    <div class="buttom">
+        <button class="buttom-button">
             Done
         </button>
       </div>  
@@ -36,48 +37,47 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-   .first-container{
-            border: 1px solid black;
-            padding: 50px;
-            background-color:rgb(31, 31, 70) ;
+   .first-container{  
+            padding: 20px;
         }
         
         .thanks-logo{
             width: 100%;
         }
-        .second-container{
-            border: 1px solid black;
-            padding: 20px;
-            background-color:rgb(31, 31, 70) ;
+
+        .second-container{ 
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 10px;   
         }
+
         .palce-order{
-            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
             font-size: 25px;
             text-align: center;
             color: white;
         }
+
         .text{
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: 550;
             color: white;
-            margin-bottom: 300px;
-        }
-        .buttom-button{
-            border: 1px solid black;
-             padding: 10px;  
-            position:relative;
+            text-align: center;
             
         }
-        .text1{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            font-weight: 550;
-            color:rgb(31, 31, 70) ;
-            border-radius: 50px;
-            padding: 10px;
-            width: 250px;
-            cursor: pointer;
+        
+        .buttom-button{
+            position: absolute;
+            bottom: -20px;
+            background-color: white;
+            left: 16px;
+            right: 16px;
+            border: none;
+            padding: 16px;
+            border-radius: 32px;
+            font-weight: bold;
+            font-size: 16px;
         }
         
 

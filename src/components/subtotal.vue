@@ -115,7 +115,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 300px;
+        height: 250px;
         border-radius: 16px 16px 0 0;
     }
 
