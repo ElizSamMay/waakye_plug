@@ -4,7 +4,7 @@ import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import  AddDishes from '../components/AddDishes.vue';
 import SubTotal from "../components/SubTotal.vue";
-import Thankyou from "../components/Thankyou.vue";
+import ThankYou from "../components/ThankYou.vue";
 
 
 const router = createRouter({
@@ -28,7 +28,7 @@ const router = createRouter({
         {
             path: '/thank-you',
             name: 'thankYou',
-            component: Thankyou
+            component: ThankYou
         }
 
         
