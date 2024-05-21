@@ -38,7 +38,7 @@ function goBack(){
 <template>
     <div v-if="!isCustomerSelectionDone">
     <section class="image-container">
-           <img class="headerpic" src="../assets/Waakyeplate 1.png">
+           <img class="headerpic" src="../assets/waakye_in_bowl.png">
     </section>
    
        
