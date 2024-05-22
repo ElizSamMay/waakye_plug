@@ -22,7 +22,7 @@ const router = createRouter({
         },
         {
             path: '/sub-total',
-            name: 'subTotal',
+            name: 'subtotal',
             component: subtotal
         },
         {
