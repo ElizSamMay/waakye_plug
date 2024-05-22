@@ -1,6 +1,6 @@
 
 <template>
- <div>
+  <div>
  
    <section class="firstsection">
         <div class="image-container">

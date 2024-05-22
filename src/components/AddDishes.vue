@@ -4,6 +4,7 @@
 import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
 import SubtotalSection from '@/components/SubtotalSection.vue'
+import PackCustomize from '@/components/PackCustomize.vue'
 import {ref} from 'vue'
 
 let combos = ref(waakyeCombos);
@@ -45,7 +46,9 @@ function goBack(){
        <section class="second-sec">
         <div class="title-and-button">
             <p>Select Pack</p>
-            <button class="create-custom-pack">Create Custom Pack</button>
+            <button class="create-custom-pack" @click="createCustomPack">
+                <PackCustomize :pack="combo" @pack-tapped="(args)=>handlePackTapped(args)"/>
+                </button>
         </div>
 
         <div class="packs">
