@@ -3,8 +3,8 @@
 import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import AddDishes from '../components/AddDishes.vue';
-import subtotal from "../components/subtotal.vue";
-import ThankYou from "../components/ThankYou.vue";
+import SubtotalSection from '../components/SubtotalSection.vue';
+import ThankYou from '../components/ThankYou.vue';
 
 
 const router = createRouter({
@@ -22,8 +22,8 @@ const router = createRouter({
         },
         {
             path: '/sub-total',
-            name: 'subtotal',
-            component: subtotal
+            name: 'subTotal',
+            component: SubtotalSection
         },
         {
             path: '/thank-you',
