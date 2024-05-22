@@ -22,8 +22,8 @@ const router = createRouter({
         },
         {
             path: '/sub-total',
-            name: 'subTotal',
-            component: SubtotalSection
+            name: 'subtotalSection',
+            // component: SubtotalSection
         },
         {
             path: '/thank-you',
