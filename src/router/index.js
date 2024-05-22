@@ -3,7 +3,7 @@
 import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import  AddDishes from '../components/AddDishes.vue';
-import SubTotal from "../components/SubTotal.vue";
+import SubTotal from "../components/subtotal.vue";
 import ThankYou from "../components/ThankYou.vue";
 
 
