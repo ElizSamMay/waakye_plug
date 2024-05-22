@@ -2,9 +2,9 @@
 
 import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
-import  AddDishes from '../components/AddDishes.vue';
-import subtotal from "../components/subTotal.vue";
-import ThankYou from "../components/ThankYou.vue";
+import AddDishes from '../components/AddDishes.vue';
+import subtotal from "../components/subtotal.vue";
+import thankyou from "../components/thankyou.vue";
 
 
 const router = createRouter({
@@ -28,7 +28,7 @@ const router = createRouter({
         {
             path: '/thank-you',
             name: 'thankYou',
-            component: ThankYou
+            component: thankyou
         }
 
         
