@@ -17,7 +17,7 @@
     }
 
     const pricings = ref([
-    {title: "Subtotal", value: props.combo?.price },
+    {title: "subtotal", value: props.combo?.price },
     {title: "Delivery Fee", value: 13},
     {title: "Total", value: 55}
     ])

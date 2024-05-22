@@ -4,6 +4,7 @@
 import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
 import subtotal from "@/components/subtotal.vue"
+
 import {ref} from 'vue'
 
 let combos = ref(waakyeCombos);
@@ -63,7 +64,7 @@ function goBack(){
         </div>
 
         <div v-else class="sub-total">
-            <SubTotal :combo="comboSelected" @handle-back-tapped="goBack"/>
+            <subtotal :combo="comboSelected" @handle-back-tapped="goBack"/>
         </div>
    </template>
    

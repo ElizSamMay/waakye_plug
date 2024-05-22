@@ -27,7 +27,7 @@ const router = createRouter({
         },
         {
             path: '/thank-you',
-            name: 'thankYou',
+            name: 'thankyou',
             component: thankyou
         }
 
