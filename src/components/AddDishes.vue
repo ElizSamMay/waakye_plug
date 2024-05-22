@@ -47,7 +47,7 @@ function goBack(){
         <div class="title-and-button">
             <p>Select Pack</p>
             <button class="create-custom-pack" @click="createCustomPack">
-                <PackCustomize :pack="combo" @pack-tapped="(args)=>handlePackTapped(args)"/>
+               Customize Your Pack
                 </button>
         </div>
 
