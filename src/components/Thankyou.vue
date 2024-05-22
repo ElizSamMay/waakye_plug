@@ -16,9 +16,9 @@
            accepted and the rider sets off on his way to your location.
            Payment will be made to the rider once item is delivered.
         </p>
-    </div>
+      </div>
 
-    <div class="buttom">
+     <div class="buttom">
         <button class="buttom-button">
             Done
         </button>
