@@ -4,7 +4,7 @@ import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import AddDishes from '../components/AddDishes.vue';
 import SubtotalSection from '../components/SubtotalSection.vue';
-import ThankYou from '../components/ThankYou.vue';
+import ThankYou from './../components/ThankYou.vue';
 
 
 
