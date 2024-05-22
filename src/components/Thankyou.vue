@@ -1,31 +1,34 @@
 <template>
-<section class="first-container">
-        <div>
-            <img class="thanks-logo" src="../assets/thank 1.png">
-        </div>
-    </section>
+    <div>
+        <section class="first-container">
+                <div>
+                    <img class="thanks-logo" src="../assets/thank 1.png">
+                </div>
+            </section>
 
-    <section class="second-container">
-      <div>
-        <p class="palce-order">
-            Order Placed
-        </p>
-      </div>
+            <section class="second-container">
+            <div>
+                <p class="palce-order">
+                    Order Placed
+                </p>
+            </div>
 
-     <div>
-        <p class="text">
-            Stay hooked, We will call you once your order  is 
-           accepted and the rider sets off on his way to your location.
-           Payment will be made to the rider once item is delivered.
-        </p>
-      </div>
+            <div>
+             <p class="text">
+                Stay hooked, We will call you once your order  is 
+                accepted and the rider sets off on his way to your location.
+                Payment will be made to the rider once item is delivered.
+             </p>
+            </div>
 
-     <div class="buttom">
-        <button class="buttom-button">
-            Done
-        </button>
-      </div>  
-    </section>
+            <div class="buttom">
+                <button class="buttom-button">
+                    Done
+                </button>
+            </div> 
+
+        </section>
+    </div>
 </template>
 
 <script>

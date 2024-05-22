@@ -1,5 +1,6 @@
 
 <template>
+ <div>
  
    <section class="firstsection">
         <div class="image-container">
@@ -68,6 +69,7 @@
     </div>
         
     </section>
+ </div>
  
     
 </template>
