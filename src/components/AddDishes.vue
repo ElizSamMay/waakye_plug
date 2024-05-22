@@ -3,7 +3,7 @@
 // import {useRouter} from 'vue-router'
 import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
-import SubtotalSection from "@/components/SubtotalSection.vue"
+import SubtotalSection from '@/components/SubtotalSection.vue'
 import {ref} from 'vue'
 
 let combos = ref(waakyeCombos);
