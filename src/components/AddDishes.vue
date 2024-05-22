@@ -48,6 +48,7 @@ function goBack(){
             <p>Select Pack</p>
             <button class="create-custom-pack" @click="createCustomPack">
                Customize Your Pack
+               <PackCustomize/>
                 </button>
         </div>
 
