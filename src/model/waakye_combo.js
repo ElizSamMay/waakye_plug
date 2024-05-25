@@ -56,7 +56,7 @@ export const ingredients = [
     {id:3,title: "Sausage", isSelected: false, image: "", price: 10},
     {id:4,title: "Fish", isSelected: false, image: "", price: 10},
     {id:6,title: "Meat", isSelected: false, image: "", price: 10},
-    {id:7,title: "Egg", isSelected: false, image: "", price: 10},
+    {id:7,title: "Egg", isSelected: false, image: "https://www.simplyrecipes.com/thmb/zsQvDavpqD2PtIO-7W6nBWVHCe4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Hard-Boiled-Eggs-LEAD-03-42506773297f4a15920c46628d534d67.jpg", price: 10},
     {id:8,title: "Wagashi", isSelected: false, image: "", price: 10},
     {id:9,title: "Wole", isSelected: false, image: "", price: 10},
     {id:10,title: "Gari", isSelected: false, image: "", price: 10},

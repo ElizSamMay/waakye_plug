@@ -42,7 +42,7 @@ function increase(args){
 function decrease(args){
     for (let i = 0; i < selectedQuantifiedItems.value.length; i++) {
     if (selectedQuantifiedItems.value[i].id === args[0].id) {
-        selectedQuantifiedItems.value[i].count -= 1
+        selectedQuantifiedItems.value[i].count = selectedQuantifiedItems.value[i].count < 1 ? 0 :  selectedQuantifiedItems.value[i].count - 1
     }
   }
 }
@@ -159,5 +159,6 @@ function confirmItems(){
     gap: 24px;
     flex-direction: column;
     margin-top: 12px;
+    padding-right: 16px ;
 }
 </style>

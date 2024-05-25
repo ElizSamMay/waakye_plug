@@ -17,7 +17,7 @@
 
         <div class="image-container">
 
-            <img src="../../assets/ghanaian_waakye_leaf.jpg" alt="">
+            <img :src="ingredient?.image" alt="">
 
         </div>
 
@@ -52,12 +52,13 @@
 
     .image-container{
         height: 50px;
-        width: 50px;
+        width: 60px;
     }
 
     .image-container img{
         height: 100%;
         width: 100%;
+        border-radius: 8px;
     }
 
     .selected{
