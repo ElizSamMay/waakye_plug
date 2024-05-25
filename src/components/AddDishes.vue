@@ -1,19 +1,19 @@
 
 <script setup> 
 // import {useRouter} from 'vue-router'
+ /* eslint-disable */
 import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
 import SubtotalSection from '@/components/SubtotalSection.vue'
-// import PackCustomize from '@/components/PackCustomize.vue'
+import PackCustomize from '@/components/PackCustomize.vue'
 import {ref} from 'vue'
 
 let combos = ref(waakyeCombos);
-// const router = useRouter()
 const isCustomerSelectionDone = ref(false)
 const comboSelected = ref(combos.value[0])
+const createCustomTapped = ref(false)
 
 function createOrder(){
-    console.log(comboSelected);
     isCustomerSelectionDone.value = true
 }
 
@@ -33,6 +33,21 @@ function goBack(){
   }
   }
 
+  function createCustomPack(){
+    createCustomTapped.value = true;
+  }
+
+  function close(){
+    createCustomTapped.value = false
+  }
+
+  function handleCreateOrder(args){
+    const ingredients = args[0]
+    console.log(ingredients)
+  }
+
+  
+
 </script>
 
 
@@ -48,7 +63,6 @@ function goBack(){
             <p>Select Pack</p>
             <button class="create-custom-pack" @click="createCustomPack">
                Customize Your Pack
-             
                 </button>
         </div>
 
@@ -61,13 +75,16 @@ function goBack(){
            
        </section>
 
-       <button class="create-order-button" @click="createOrder">
+       <button class="create-order-button" @click="createOrder" v-if="!createCustomTapped">
                Create Order
          </button>
         </div>
 
         <div v-else class="sub-total">
             <SubtotalSection :combo="comboSelected" @handle-back-tapped="goBack"/>
+        </div>
+        <div :class="{'customize-pack bring-to-top': createCustomTapped, 'customize-pack send-to-bottom': !createCustomTapped }" v-if="createCustomTapped" >
+            <PackCustomize @handle-close-tapped="close" @create-order-tapped="(ingredients)=>handleCreateOrder(ingredients)"/>
         </div>
    </template>
    
@@ -138,6 +155,24 @@ function goBack(){
 
         .sub-total{
             min-height: 100%;
+        }
+
+        .customize-pack{
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.6);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: top 0.5s ease-in-out 0.2s;
+        }
+
+        .bring-to-top{
+            top: 0
+        }
+
+        .send-to-bottom{
+            top: 1000px;
         }
 
     @media only screen and (max-height: 700px) {
