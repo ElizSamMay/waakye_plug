@@ -4,10 +4,16 @@ import CustomPackSelect from "@/components/helperComponents/CustomPackSelect.vue
 import { ingredients } from "@/model/waakye_combo.js";
 import SelectedOrderTile from "@/components/helperComponents/SelectedOrderTile.vue"
 import { ref } from "vue";
+import {purchaseItemStore} from '@/store/store.js';
+import { useRouter } from 'vue-router'
+
+
 
 const waakyeIngredients = ref(ingredients);
 const selectedQuantifiedItems = ref(getSelectedWithQuantity());
 const userSelectsItems = ref(false);
+const router = useRouter()
+
 
 
 function handleIngredientTapped(args) {
@@ -27,7 +33,7 @@ function getSelectedIngredients(){
 
   function getSelectedWithQuantity(){
     const items = getSelectedIngredients()
-    const mappedItems = items.map((item)=>{ return {id:item.id, title: item.title, count: 1, price: item.price}});
+    const mappedItems = items.map((item)=>{ return {id:item.id, title: item.title, count: item.quantity, price: item.price}});
     return mappedItems;
 }
 
@@ -48,7 +54,23 @@ function decrease(args){
 }
 
 function confirmItems(){
-    selectedQuantifiedItems.value = getSelectedWithQuantity();
+  
+  const prices = selectedQuantifiedItems.value.map((value)=>value.price * value.count)
+
+  if (userSelectsItems.value){
+    const subtotal =  prices.reduce((acc, currValue)=> acc + currValue, 0)
+    const waakyePack = {title: "Waakye Custom", ingredients: selectedQuantifiedItems.value, price: subtotal + purchaseItemStore.waakyePrice, quantity: 1, subtotal: 0}
+    purchaseItemStore.update(waakyePack)
+    router.push('/sub-total')
+    return;
+  }
+
+  previewItems()
+    
+}
+
+function previewItems(){
+    selectedQuantifiedItems.value = getSelectedWithQuantity()
     userSelectsItems.value = true
 }
 
@@ -77,8 +99,12 @@ function confirmItems(){
 
 
     <div class="confirm-list" v-else>
-        <div v-for="selected in selectedQuantifiedItems">
+        <div v-for="selected in selectedQuantifiedItems" v-if="selectedQuantifiedItems.length > 0">
             <SelectedOrderTile :pack="selected" @increase="(args)=>increase(args)" @decrease="(args)=>decrease(args)"/>
+        </div>
+
+        <div v-else>
+            <p>No Item Selected</p>
         </div>
     </div>
 

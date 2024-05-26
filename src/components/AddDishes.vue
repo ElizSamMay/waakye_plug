@@ -4,9 +4,13 @@
  /* eslint-disable */
 import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
-import SubtotalSection from '@/components/SubtotalSection.vue'
 import PackCustomize from '@/components/PackCustomize.vue'
 import {ref} from 'vue'
+import { purchaseItemStore } from '@/store/store.js'
+import {useRouter} from 'vue-router'
+   
+
+ const router = useRouter()
 
 let combos = ref(waakyeCombos);
 const isCustomerSelectionDone = ref(false)
@@ -14,7 +18,8 @@ const comboSelected = ref(combos.value[0])
 const createCustomTapped = ref(false)
 
 function createOrder(){
-    isCustomerSelectionDone.value = true
+    purchaseItemStore.update(comboSelected.value)
+    router.push('/sub-total')
 }
 
 function goBack(){
@@ -80,9 +85,7 @@ function goBack(){
          </button>
         </div>
 
-        <div v-else class="sub-total">
-            <SubtotalSection :combo="comboSelected" @handle-back-tapped="goBack"/>
-        </div>
+        
         <div :class="{'customize-pack bring-to-top': createCustomTapped, 'customize-pack send-to-bottom': !createCustomTapped }" v-if="createCustomTapped" >
             <PackCustomize @handle-close-tapped="close" @create-order-tapped="(ingredients)=>handleCreateOrder(ingredients)"/>
         </div>

@@ -2,37 +2,41 @@
     // import {useRouter} from 'vue-router'
     import OrderTile from '@/components/helperComponents/OrderTile.vue'
     import {useRouter} from 'vue-router';
-    import {defineProps, ref} from 'vue'
+
     import InputField from '@/components/helperComponents/InputField.vue'
     import PriceDisplay from '@/components/helperComponents/PriceDisplay.vue'
-
-    const props = defineProps({
-        combo: Object
-    })
+    import { purchaseItemStore } from '@/store/store.js'
+    import {onMounted} from 'vue';
 
     const router = useRouter()
+
+    onMounted(()=>{
+        purchaseItemStore.init()
+        purchaseItemStore.performUpdate()
+    })
+
 
     function handleStartButtonTapped(){
         router.push('/thank-you')
     }
 
-    const pricings = ref([
-    {title: "Subtotal", value: props.combo?.price },
-    {title: "Delivery Fee", value: 13},
-    {title: "Total", value: 55}
-    ])
+    function goBack(){
+        router.go(-1)
+    }
+
+
 
 </script>
 
 <template>
     <div class="container-holder">
     <div class="top-section">
-        <button class="back-button" @click="$emit('handle-back-tapped')">Back</button>
+        <button class="back-button" @click="goBack">Back</button>
         <div class="title">Order Details</div>
 
         <div class="order-tile">
             <div>
-                <OrderTile :food="props.combo"/>
+                <OrderTile :food="purchaseItemStore.item"/>
             </div>
         </div>
     </div>
@@ -46,7 +50,7 @@
 
     <div class="order-details">
         <div class="prices">
-            <div v-for="price in pricings" :key="price">
+            <div v-for="price in purchaseItemStore.purchaseDetails" :key="price">
                 <PriceDisplay :pricing="price"/>
             </div>
         
@@ -77,7 +81,7 @@
     }
     .container-holder{
         /* padding: 16px; */
-        min-height: 100vh;
+       height: 100vh;
         display: flex;
         flex-direction: column;
         gap: 16px;
