@@ -1,3 +1,14 @@
+<script setup>
+import {useRouter} from 'vue-router'
+const router = useRouter()
+
+function goToHome(){
+router.go(-3);
+}
+
+</script>
+
+
 <template>
     <div>
         <section class="first-container">
@@ -22,7 +33,7 @@
             </div>
 
             <div class="buttom">
-                <button class="buttom-button">
+                <button class="buttom-button" @click="goToHome">
                     Done
                 </button>
             </div> 
@@ -31,9 +42,7 @@
     </div>
 </template>
 
-<script>
 
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
