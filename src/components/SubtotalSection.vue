@@ -2,13 +2,19 @@
     // import {useRouter} from 'vue-router'
     import OrderTile from '@/components/helperComponents/OrderTile.vue'
     import {useRouter} from 'vue-router';
-
     import InputField from '@/components/helperComponents/InputField.vue'
     import PriceDisplay from '@/components/helperComponents/PriceDisplay.vue'
     import { purchaseItemStore } from '@/store/store.js'
-    import {onMounted} from 'vue';
+    import {onMounted, ref} from 'vue';
+    import LoaderView from "@/components/helperComponents/LoaderView.vue"
+    import {makeApiRequest, RequestMethod} from '@/shared/api_helper.js'
+    import {fireSuccessAlertWithAction, fireFailureAlert} from '@/shared/alert_action.js'
 
     const router = useRouter()
+    const isLoading = ref(false)
+    const userName = ref("")
+    const location = ref("")
+    const phoneNumber = ref("")
 
     onMounted(()=>{
         purchaseItemStore.init()
@@ -16,9 +22,23 @@
     })
 
 
-    function handleStartButtonTapped(){
-        router.push('/thank-you')
+    async function handleStartButtonTapped(){
+        try{
+        isLoading.value = true
+        const order = await makeApiRequest("/order", RequestMethod.POST, purchaseItemStore.getDetailsOfDelivery(userName.value, location.value, phoneNumber.value), {}, false, "")
+        isLoading.value = false
+        if (order.status === 200){
+            fireSuccessAlertWithAction("Order Placed", ()=>{
+                router.push('/thank-you')
+            })
+        }else{
+          fireFailureAlert("Order placing failed, please try again.")
+        }} catch(err){
+            fireFailureAlert("Order placing failed, please try again.")
+        }
+        
     }
+
 
     function goBack(){
         router.go(-1)
@@ -43,9 +63,9 @@
 
 
     <div class="break-down">
-        <InputField fieldTitle="Name of Buyer *" v-model="className" @input-change="handleValidation"/>
-        <InputField fieldTitle="Phone Number *" v-model="className" @input-change="handleValidation"/>
-        <InputField fieldTitle="Land mark (Optional)" v-model="className" @input-change="handleValidation"/>
+        <InputField fieldTitle="Name of Buyer *" v-model="userName" @input-change="handleValidation"/>
+        <InputField fieldTitle="Phone Number *" v-model="phoneNumber" @input-change="handleValidation"/>
+        <InputField fieldTitle="Land mark (Optional)" v-model="location" @input-change="handleValidation"/>
     </div>
 
     <div class="order-details">
@@ -60,7 +80,7 @@
 
     </div>
     
-    
+    <LoaderView message="Creating order please wait ..." v-if="isLoading"/>
 </template>
 
 

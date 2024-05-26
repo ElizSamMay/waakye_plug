@@ -24,7 +24,7 @@ function createOrder(){
 
 function goBack(){
     isCustomerSelectionDone.value = false
-}
+}     
 
   function handlePackTapped(args){
     const combo = args[0];

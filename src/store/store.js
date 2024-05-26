@@ -56,6 +56,16 @@ export const purchaseItemStore = reactive({
     performUpdate(){
         this.updateTotal()
         this.updateDetails()
+    },
+    getDetailsOfDelivery(userName, location, phoneNumber){
+        return {
+            userName,
+            location,
+            phoneNumber,
+            food_type: this.item.title,
+            ingredients: this.item.ingredients,
+            packs: this.item.quantity
+        }
     }
 
 })

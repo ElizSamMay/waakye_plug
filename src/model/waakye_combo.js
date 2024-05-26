@@ -3,7 +3,7 @@ export const waakyeCombos = [
     {   
         id: 0,
         title: "Waakye Combo", 
-    ingredients: ["waakye", "wole", "egg","sausage","salad","gari" ],
+        ingredients: ["waakye", "wole", "egg","sausage","salad","gari" ],
         price: 30, 
         isSelected: true
     },

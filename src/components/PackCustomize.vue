@@ -19,6 +19,9 @@ const router = useRouter()
 function handleIngredientTapped(args) {
 
   const ingredient = args[0];
+  console.log(
+    JSON.stringify(ingredient)
+  )
 
   for (let i = 0; i < waakyeIngredients.value.length; i++) {
     if (waakyeIngredients.value[i].id === ingredient.id) {
@@ -26,6 +29,7 @@ function handleIngredientTapped(args) {
     }
   }
 }
+
 function getSelectedIngredients(){
      const selectedIngredients = waakyeIngredients.value.filter((ingredient)=>ingredient.isSelected == true)
      return selectedIngredients;
@@ -33,7 +37,7 @@ function getSelectedIngredients(){
 
   function getSelectedWithQuantity(){
     const items = getSelectedIngredients()
-    const mappedItems = items.map((item)=>{ return {id:item.id, title: item.title, count: item.quantity, price: item.price}});
+    const mappedItems = items.map((item)=>{ return {id:item.id, title: item.title, count: 1, price: item.price}});
     return mappedItems;
 }
 
@@ -54,7 +58,7 @@ function decrease(args){
 }
 
 function confirmItems(){
-  
+
   const prices = selectedQuantifiedItems.value.map((value)=>value.price * value.count)
 
   if (userSelectsItems.value){
@@ -70,6 +74,7 @@ function confirmItems(){
 }
 
 function previewItems(){
+  console.log(JSON.stringify(selectedQuantifiedItems.value))
     selectedQuantifiedItems.value = getSelectedWithQuantity()
     userSelectsItems.value = true
 }
