@@ -2,24 +2,19 @@
 
 
 <script setup>
-import { defineProps, ref } from 'vue';
-
-const props = defineProps({
-    food: Object
-})
-
-const quantity = ref(1)
-const productPrice = ref(props.food?.price ?? 0)
+import {purchaseItemStore} from '@/store/store.js'
 
 function increaseQuantity(){
-    quantity.value += 1;
-    productPrice.value = (props.food?.price ?? 0) * quantity.value;
+    const quantity = purchaseItemStore.item.quantity + 1
+    purchaseItemStore.updateQuantity(quantity)
 }
 
+
+
 function decreaseQuantity(){
-    const decreasedValue = quantity.value - 1
-    quantity.value = (quantity.value <= 1) ? 1 : decreasedValue;
-    productPrice.value = (props.food?.price ?? 0) * quantity.value;
+    const quantity = purchaseItemStore.item.quantity - 1
+    const updatedQuantity = (quantity <= 1) ? 1 : quantity;
+    purchaseItemStore.updateQuantity(updatedQuantity)
 }
 
 </script>
@@ -35,16 +30,16 @@ function decreaseQuantity(){
     </div>
 
     <div class="descriptions">
-        <p class="title-font">{{ props.food?.title }}</p>
+        <p class="title-font">{{ purchaseItemStore.item.title }}</p>
         <p class="description">Waakye</p>
-        <p class="price">GHS {{ productPrice }}</p>
+        <p class="price">GHS {{ purchaseItemStore.item.subtotal }}</p>
     </div>
 </div>
 
 
     <div class="increase-decrease-buttons">
         <div class="decrease button" @click="decreaseQuantity">-</div>
-        <p class="number">{{ quantity }}</p>
+        <p class="number">{{ purchaseItemStore.item.quantity }}</p>
         <div class="increase button" @click="increaseQuantity">+</div>
     </div>
 
