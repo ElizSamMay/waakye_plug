@@ -26,7 +26,7 @@ function decreaseQuantity(){
 
 <div class="first-section">
     <div class="image-container">
-        <img src="https://eatwellabi.com/wp-content/uploads/2021/09/Waakye-13.jpg" alt="">
+        <img src="@/assets/Waakye5.jpg" alt="">
     </div>
 
     <div class="descriptions">

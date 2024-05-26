@@ -1,5 +1,6 @@
 <script setup>
     // import {useRouter} from 'vue-router'
+    /* eslint-disable */
     import OrderTile from '@/components/helperComponents/OrderTile.vue'
     import {useRouter} from 'vue-router';
     import InputField from '@/components/helperComponents/InputField.vue'
@@ -15,6 +16,10 @@
     const userName = ref("")
     const location = ref("")
     const phoneNumber = ref("")
+    const confirmOrder = ref(false)
+    const showNameError = ref(false)
+    const showNumberError = ref(false)
+    const showLocationError = ref(false)
 
     onMounted(()=>{
         purchaseItemStore.init()
@@ -44,7 +49,36 @@
         router.go(-1)
     }
 
+    function confirmOrderTapped(){
+            if (userName.value.length > 1 && location.value.length > 1 && phoneNumber.value.length > 1){
+                confirmOrder.value = true
+                return;
+            }
 
+            validate()
+            
+        
+    }
+
+    function validate(){
+        if (userName.value.length < 1){
+            showNameError.value = true
+        }
+
+        if (location.value.length < 1){
+            showLocationError.value = true
+        }
+
+        if (phoneNumber.value.length < 1){
+            showNumberError.value = true
+        }
+    }
+
+    
+    function closeConfirmOrderTapped(){
+            confirmOrder.value = false
+        
+    }
 
 </script>
 
@@ -63,20 +97,24 @@
 
 
     <div class="break-down">
-        <InputField fieldTitle="Name of Buyer *" v-model="userName" @input-change="handleValidation"/>
-        <InputField fieldTitle="Phone Number *" v-model="phoneNumber" @input-change="handleValidation"/>
-        <InputField fieldTitle="Land mark (Optional)" v-model="location" @input-change="handleValidation"/>
+        <InputField fieldTitle="Name of Buyer *" valiadateString="Name must not be empty" v-model="userName" @input-change="handleValidation" :showError="showNameError"/>
+        <InputField fieldTitle="Phone Number *" valiadateString="Phone number must not be empty" v-model="phoneNumber" @input-change="handleValidation" :showError="showNumberError"/>
+        <InputField fieldTitle="Location" valiadateString="location must not be empty" v-model="location" @input-change="handleValidation" :showError="showLocationError"/>
     </div>
 
-    <div class="order-details">
+    <div class="order-details" v-if="confirmOrder">
+         <button class="close-button" @click="closeConfirmOrderTapped">
+        X
+      </button>
         <div class="prices">
             <div v-for="price in purchaseItemStore.purchaseDetails" :key="price">
                 <PriceDisplay :pricing="price"/>
             </div>
         
         </div>
-        <button class="confirm-order-button" @click="handleStartButtonTapped">Confirm Order</button>
+        <button class="confirm-order-button confirm" @click="handleStartButtonTapped">Confirm Order</button>
     </div>
+     <button class="confirm-order-button" @click="confirmOrderTapped" v-if="!confirmOrder">Confirm price</button>
 
     </div>
     
@@ -87,10 +125,24 @@
 
 <style scoped>
 
+  .close-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  right: 16px;
+  top: 16px
+}
+
     .confirm-order-button{
-        position: absolute;
+        position: fixed;
         bottom: 16px;
-        background-color: white;
+        background-color: rgb(31, 31, 70);
+        color: white ;
         left: 16px;
         right: 16px;
         border: none;
@@ -99,6 +151,13 @@
         font-weight: bold;
         font-size: 16px;
     }
+
+     .confirm{
+     color: rgb(31, 31, 70);
+     background-color: white;
+   }
+
+
     .container-holder{
         /* padding: 16px; */
        height: 100vh;
@@ -139,8 +198,9 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 250px;
+        height: 300px;
         border-radius: 16px 16px 0 0;
+        padding-top: 24px;
     }
 
     .prices{
