@@ -2,9 +2,12 @@
 
 import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
-import  AddDishes from '../components/AddDishes.vue';
-import SubTotal from "../components/SubTotal.vue";
-import ThankYou from "../components/ThankYou.vue";
+import AddDishes from '../components/AddDishes.vue';
+import SubtotalSection from '../components/SubtotalSection.vue';
+import PackCustomize from '../components/PackCustomize.vue';
+import EndThankYou from '../components/EndThankYou.vue';
+
+
 
 
 const router = createRouter({
@@ -21,14 +24,19 @@ const router = createRouter({
             component: AddDishes
         },
         {
+            path: '/pack-customize',
+            name: 'packCustomize',
+            component: PackCustomize
+        },
+        {
             path: '/sub-total',
-            name: 'subTotal',
-            component: SubTotal
+            name: 'subtotalSection',
+            component: SubtotalSection
         },
         {
             path: '/thank-you',
             name: 'thankYou',
-            component: ThankYou
+            component: EndThankYou
         }
 
         

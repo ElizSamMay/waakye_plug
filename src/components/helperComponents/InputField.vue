@@ -7,7 +7,9 @@ import {defineModel, defineProps} from 'vue'
 
  const props = defineProps({
         fieldTitle: String,
-        fieldPlaceholder: String
+        fieldPlaceholder: String,
+        valiadateString : String,
+        showError: Boolean
     })
 
 </script>
@@ -20,6 +22,7 @@ import {defineModel, defineProps} from 'vue'
          <div class="input-holder">
             <input type="text" :placeholder="props.fieldPlaceholder" v-model="model" @keydown="$emit('input-change')">
          </div>
+         <div class="validate" v-if="props.showError"> {{valiadateString}}  </div>
     </div>
 
 </template>
@@ -49,6 +52,10 @@ input{
     border-radius: 8px;
     border:  none;
     padding: 8px;
+}
+
+.validate{
+    color: red;
 }
 
 

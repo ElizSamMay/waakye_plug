@@ -1,39 +1,48 @@
+<script setup>
+import {useRouter} from 'vue-router'
+const router = useRouter()
+
+function goToHome(){
+router.go(-3);
+}
+
+</script>
+
+
 <template>
-<section class="first-container">
-        <div>
-            <img class="thanks-logo" src="../assets/thank 1.png">
-        </div>
-    </section>
+    <div>
+        <section class="first-container">
+                <div>
+                    <img class="thanks-logo" src="../assets/thank 1.png">
+                </div>
+            </section>
 
-    <section class="second-container">
-      <div>
-        <p class="palce-order">
-            Order Placed
-        </p></div>
-        <div>
-        <p class="text">
-            Stay hooked, We will call you once your order  is 
-           accepted and the rider sets off on his way to your location.
-           Payment will be made to the rider once item is delivered.
-        </p>
+            <section class="second-container">
+            <div>
+                <p class="palce-order">
+                    Order Placed
+                </p>
+            </div>
+
+            <div>
+             <p class="text">
+                Stay hooked, We will call you once your order  is 
+                accepted and the rider sets off on his way to your location.
+                Payment will be made to the rider once item is delivered.
+             </p>
+            </div>
+
+            <div class="buttom">
+                <button class="buttom-button" @click="goToHome">
+                    Done
+                </button>
+            </div> 
+
+        </section>
     </div>
-
-    <div class="buttom">
-        <button class="buttom-button">
-            Done
-        </button>
-      </div>  
-    </section>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
