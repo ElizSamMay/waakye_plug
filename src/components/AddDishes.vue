@@ -32,8 +32,6 @@ function goBack(){
     for (let i=0; i<combos.value.length; i++){
     if (combos.value[i].id === combo.id){
         combos.value[i].isSelected = !combos.value[i].isSelected
-    }else{
-        combos.value[i].isSelected = false
     }
   }
   }

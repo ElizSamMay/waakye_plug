@@ -47,11 +47,13 @@ router.go(-3);
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
    .first-container{  
-            padding: 20px;
+           
         }
         
         .thanks-logo{
-            width: 100%;
+            width: 40%;
+            display: block;
+            margin: 0 auto;  
         }
 
         .second-container{ 
@@ -77,14 +79,15 @@ router.go(-3);
         }
         
         .buttom-button{
-            position: absolute;
-            bottom: -20px;
+            position: fixed;
+            bottom: 10px;
             background-color: white;
             left: 16px;
             right: 16px;
             border: none;
             padding: 16px;
             border-radius: 32px;
+            z-index: 1000;
             font-weight: bold;
             font-size: 16px;
         }

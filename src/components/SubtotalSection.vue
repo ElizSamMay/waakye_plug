@@ -114,7 +114,7 @@
         </div>
         <button class="confirm-order-button confirm" @click="handleStartButtonTapped">Confirm Order</button>
     </div>
-     <button class="confirm-order-button" @click="confirmOrderTapped" v-if="!confirmOrder">Confirm price</button>
+     <button class="confirm-order-button" @click="confirmOrderTapped" v-if="!confirmOrder">Confirm Price</button>
 
     </div>
     
@@ -127,7 +127,7 @@
 
   .close-button {
   color: white;
-  background-color: transparent;
+  background-color:transparent;
   border: none;
   width: 24px;
   height: 24px;
