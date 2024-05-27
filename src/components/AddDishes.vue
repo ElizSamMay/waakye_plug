@@ -151,7 +151,7 @@ function goBack(){
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            padding: 16px;
+            padding: 14px;
         }
 
         .sub-total{
@@ -184,7 +184,7 @@ function goBack(){
 
     @media only screen and (max-height: 900px) {
         .second-sec {
-        height: 110vh;
+        height: 140vh;
     }
     }
 
