@@ -4,7 +4,7 @@ export const waakyeCombos = [
         id: 0,
         title: "Waakye Combo", 
         ingredients: ["waakye", "wole", "egg","sausage","salad","gari" ],
-        price: 30.50, 
+        price: 30.00, 
         isSelected: true
     },
     
