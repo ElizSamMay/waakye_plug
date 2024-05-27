@@ -11,7 +11,7 @@ export const waakyeCombos = [
     {   
         id: 1,
         title: "Waakye Super", 
-        ingredients: ["waakye", "cassava fish","wole", "egg",  "salad","macaroni", "gari"],
+        ingredients: ["waakye", "cassava fish","wole", "egg",  "salad","macroni", "gari"],
         price: 41.00, 
         isSelected: false
     },
@@ -19,7 +19,7 @@ export const waakyeCombos = [
     {   
         id: 4,
         title: "Waakye Capo", 
-        ingredients: ["waakye", "chicken","wole", "egg",  "salad","macaroni", "gari"],
+        ingredients: ["waakye", "chicken","wole", "egg",  "salad","macroni", "gari"],
         price: 41.00, 
         isSelected: false
     },
@@ -27,7 +27,7 @@ export const waakyeCombos = [
     {   
         id: 5,
         title: "Waakye Gooda", 
-        ingredients: ["waakye", "meat","wole", "egg",  "salad","macaroni", "gari"],
+        ingredients: ["waakye", "meat","wole", "egg",  "salad","macroni", "gari"],
         price: 41.00, 
         isSelected: false
     },
@@ -35,14 +35,14 @@ export const waakyeCombos = [
     {   
         id: 2,
         title: "Waakye Mega", 
-        ingredients: ["waakye", "cassava fish","meat", "egg", "wole", "salad","macaroni", "gari"],
+        ingredients: ["waakye", "cassava fish","meat", "egg", "wole", "salad","macroni", "gari"],
         price: 55.00, 
         isSelected: false
     },
     {   
         id: 3,
         title: "Waakye Agadoo", 
-        ingredients: ["waakye", "cassava fish", "meat", "egg","chicken", "wole", "salad","macaroni", "gari","wagashi"],
+        ingredients: ["waakye", "cassava fish", "meat", "egg","chicken", "wole", "salad","macroni", "gari","wagashi"],
         price: 75.00, 
         isSelected: false
     },
