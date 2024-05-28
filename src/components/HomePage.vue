@@ -71,7 +71,7 @@
         
 
         .image-handler{
-            width: 200px;
+            width: 170px;
             position: absolute;
             left: 0;
             top: 0;
@@ -88,8 +88,8 @@
             padding:  16px;
             display: flex;
             flex-direction: column;
-             height: 1rem; 
-            gap: 32px;
+             height: 3rem; 
+            gap: 30px;
             
 
         }
