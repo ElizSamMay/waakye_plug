@@ -118,6 +118,7 @@
 
     </div>
     
+    
     <LoaderView message="Creating order please wait ..." v-if="isLoading"/>
 </template>
 

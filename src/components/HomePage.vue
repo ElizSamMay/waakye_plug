@@ -88,7 +88,7 @@
             padding:  16px;
             display: flex;
             flex-direction: column;
-             height: 3rem; 
+            height: 3rem; 
             gap: 30px;
             
 
@@ -97,7 +97,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 2rem;
             font-weight: 700;
-            
+        
         }
 
         .text-2-comp{
