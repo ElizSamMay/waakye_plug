@@ -1,22 +1,48 @@
 
 <template>
-   <section class="firstSection">
+    <section class="firstSection">
 
         <div class="sideBar">
-            <div class="foodbuzz-logo"></div>
+            <div class="foodbuzz-logo">
+                <p class="logotext">
+                    Food Buzz
+                </p>
+            </div>
 
             <div class="boardlist">
-                <p>Dashboard</p>
-                <p>Menu</p>
-                <p>Order list</p>
-                <p>Analytics</p>
-                <p>Teams</p>
-                <p>Massage</p>
-                <p>Settings</p>
+                <p class="list">
+                    Dashboard
+                </p>
+
+                <p class="list">
+                    Menu
+                </p>
+
+                <p class="list">
+                    Order list
+                </p>
+
+                <p class="list">
+                    Analytics
+                </p>
+
+                <p class="list">
+                    Teams
+                </p>
+
+                <p class="list">
+                    Massage
+                </p>
+
+                <p class="list">
+                    Settings
+                </p>
             </div>
 
             <div class="logout">
-                <p>Log Out</p>
+                <p class="list">
+                    Log Out
+                </p>
             </div>
 
         </div>
@@ -24,16 +50,24 @@
             <div class="machine-engine">
                 <div class="welcome-seacrhzone">
                         <div class="message">
-                            Welcome Sam
+                            Welcome, Sam
                         </div>
 
                         <div class="search-bar">
-                            <input>
+                            <input class="search" type="text" placeholder="search">
                         </div>
 
                         <div class="admin-profilepic">
-                            <p>Soba</p>
-                            <p>Admin</p>
+                            <div class="noticification">
+
+                            </div>
+                            <div class="display-picture">
+                                
+                            </div>
+                            <div class="nametext">
+                                <p class="lis">Soba</p>
+                                <p class="texadmin">Admin</p>
+                           </div>
                         </div>
                 </div>
 
@@ -58,6 +92,7 @@
                 </div>
             </div>
     </section>
+             
 </template>
 
 
@@ -83,6 +118,8 @@
         flex-direction: row;
         gap: 50px;
         padding: 50px;
+       
+        
 
     }
     .sideBar{
@@ -91,21 +128,34 @@
         align-content: space-around;
         gap: 80px;
         border: 1px solid black;
+        border-radius: 10px;
         width: 200px;
         height: 80vh;
         padding: 20px;
     }
+    .list{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        line-height: 15px;
+    }
     .foodbuzz-logo{
-        border: 1px solid black;
-       height: 20px;   
+        /* border: 1px solid black;
+       height: 50px;    */
+    }
+    .logotext{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center; 
     }
     .boardlist{
-        border: 1px solid black;
-        height: 250px; 
+         /* border: 1px solid black; 
+        height: 200px;  */
     }
     .logout{
-        border: 1px solid black;
-        height: 20px;   
+        /* border: 1px solid black;
+        height: 30px;    */
     }
     .machine-engine{
         display: flex;
@@ -116,26 +166,56 @@
     .welcome-seacrhzone{
         display: flex;
         flex-direction: row;
-        gap: 100px;
-        justify-content: center;
+        gap: 80px;
         border: 1px solid black;
+        border-radius: 10px;
         width: 800px;
-        height: 10vh;
+        /* height: 10vh; */
     }
     .message{
-        border: 1px solid black;
-        width: 100px;
-        height: 10vh;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        /* border: 1px solid black;
+         width: 100px;
+        height: 10vh;  */
     }
     .search-bar{
-        border: 1px solid black;
-        width: 300px;
-        height: 10vh; 
+       
+       
+        align-content: center;
+       
+    }
+    .search{
+        padding: 10px;
+        width: 250px;
+        height: 30px;
+        border-radius: 15px;
     }
     .admin-profilepic{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+          border: 1px solid black; 
+        
+
+    }
+    .noticification{
         border: 1px solid black;
-        width: 80px;
-        height: 10vh; 
+        padding: 20px; 
+    }
+    .display-picture{
+        border: 1px solid black;
+        padding: 20px;
+    }
+    .nametext{
+        border: 1px solid black;
+        padding: 20px    ;
+    }
+    .texadmin{
+        font-size: 12px;
+        
     }
     .engine{
         border: 1px solid black;
@@ -188,5 +268,5 @@
         width: 300px;
         height: 150px; 
     }
-  
+
 </style>
