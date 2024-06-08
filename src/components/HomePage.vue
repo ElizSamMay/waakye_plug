@@ -138,7 +138,7 @@
             font-size: 16px;
             border-radius: 32px;
             font-weight: bold;
-            color: rgb(31, 31, 70);
+            color: rgb(31, 31, 70)
         }
 
         
