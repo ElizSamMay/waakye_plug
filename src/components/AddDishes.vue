@@ -32,8 +32,6 @@ function goBack(){
     for (let i=0; i<combos.value.length; i++){
     if (combos.value[i].id === combo.id){
         combos.value[i].isSelected = !combos.value[i].isSelected
-    }else{
-        combos.value[i].isSelected = false
     }
   }
   }
@@ -65,11 +63,14 @@ function goBack(){
        
        <section class="second-sec">
         <div class="title-and-button">
-            <p>Select Pack</p>
+            <p>Create your own custom pack</p>
             <button class="create-custom-pack" @click="createCustomPack">
                Customize Your Pack
                 </button>
         </div>
+        <div class="let-select">
+               Select Fixed Pack
+            </div>
 
         <div class="packs">
             <div v-for="combo in combos" :key="combo.title">
@@ -107,6 +108,7 @@ function goBack(){
         }
 
         .create-order-button{
+            
             /* width: 100%; */
             padding: 16px;
             border-radius: 32px;
@@ -123,16 +125,19 @@ function goBack(){
         }
 
         .second-sec{
+            
             background-color: white;
             height: 200vh;
             
         }
 
         .title-and-button{
-            padding: 32px 16px 16px 16px;
+            padding: 32px 16px 20px 16px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: space-around;
             align-items: center;
+            
         }
 
         .title-and-button p:nth-child(1){
@@ -141,19 +146,27 @@ function goBack(){
         }
 
         .create-custom-pack{
-            padding: 8px 12px;
+            padding: 16px 32px;
             border: none;
-            border-radius: 16px;
+            border-radius: 32px;
+            font-size: 16px;
             font-weight: bold;
             background-color: rgb(31, 31, 70);
-            color: white
+            color: white;
+            margin: 16px;
+        }
+        .let-select{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 16px;
+     
         }
 
         .packs{
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            padding: 16px;
+            padding: 14px;
         }
 
         .sub-total{
@@ -186,7 +199,7 @@ function goBack(){
 
     @media only screen and (max-height: 900px) {
         .second-sec {
-        height: 110vh;
+        height: 160vh;
     }
     }
 

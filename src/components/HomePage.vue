@@ -71,7 +71,7 @@
         
 
         .image-handler{
-            width: 200px;
+            width: 170px;
             position: absolute;
             left: 0;
             top: 0;
@@ -83,13 +83,31 @@
             height: 100%;
             width: 100%;
         }
-       
-        
+        .second-sec{
+            color: white;
+            padding:  16px;
+            display: flex;
+            flex-direction: column;
+            height: 3rem; 
+            gap: 30px;
+            
+
+        }
         .text1{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 2rem;
             font-weight: 700;
+        
         }
+
+        .text-2-comp{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+       
+        
+        
 
         .text2,.text3{
             font-family: Arial, Helvetica, sans-serif;
@@ -103,17 +121,12 @@
         }
         
     
-        .butt{
-            padding: 10px;  
-            position: absolute;
-            bottom: 15px;  
-            left:  70px; 
-        }
+        
         
         .bottom-button
         {
             position: fixed;
-            bottom: 32px;
+            bottom: 25px;
             left: 16px;
             right: 16px;
         }
@@ -128,18 +141,5 @@
             color: rgb(31, 31, 70);
         }
 
-        .second-sec{
-            color: white;
-            padding:  0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-
-        }
-
-        .text-2-comp{
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+        
 </style>

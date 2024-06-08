@@ -147,13 +147,13 @@ function previewItems(){
 }
 
 .close-button {
-  color: rgb(31, 31, 70);
-  background-color: transparent;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
   border: none;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid rgb(31, 31, 70);
+  border: 2px solid white;
 }
 
 .create-order-button {
@@ -168,7 +168,6 @@ function previewItems(){
   bottom: 32px;
   left: 16px;
   right: 16px;
-  z-index: 1000;
   background-color: rgb(31, 31, 70);
   color: white;
 }
