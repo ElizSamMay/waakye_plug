@@ -1,4 +1,4 @@
-
+ /* eslint-disable */
 export const waakyeCombos = [
     {   
         id: 0,
@@ -62,3 +62,80 @@ export const ingredients = [
     {id:9,title: "Wele", isSelected: false, image: "https://i.ytimg.com/vi/dL9r9mKPcTQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCcJG3IPdnXk-hL-y7xGsgWWqW7RA", price: 7.00},
     {id:10,title: "Gari", isSelected: false, image: "https://www.homefoodsghana.com/images/food/gari-foto.jpg", price: 3.00},
 ]
+
+
+export const shops = [
+    {id:0, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc7zPBwGUY0plhsV-Y8U0mMTKtcCDifbGN8Q&s", businessName: "Afri Fingers", street: "Madina", contact: "0556236739", wallpaper:"https://bukarestaurant.com/images/main-1.jpg", packs:[
+        {   
+            id: 0,
+            title: "Fried Rice", 
+            ingredients: ["Chicken Wings"],
+            price: 45.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://peacockrice.com.gh/wp-content/uploads/2021/08/Imagen-7.jpg"
+        },
+        {   
+            id: 2,
+            title: "Fried Rice", 
+            ingredients: ["Chicken Tie"],
+            price: 45.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://i0.wp.com/www.nigerianlazychef.com/wp-content/uploads/2016/12/IMG_6780.jpg?ssl=1"
+        },
+        {   
+            id: 1,
+            title: "Jollof Rice", 
+            ingredients: ["Cow Meat"],
+            price: 45.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoiTnT27UzgJi3H_z92NjfG5hRO3gCSwh2gtj35w6BN7fXXEE8wPz-diqyvTh9Gss4HU&usqp=CAU"
+        },
+       
+        {   
+            id: 3,
+            title: "Fried Rice", 
+            ingredients: ["Assorted"],
+            price: 75.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwN1zMsBHU5wwFegIAYcOMF_Mp5TkZcF4RysJdkGI2J_45ZKeP5bpydi0wWkQTZJm3opc&usqp=CAU"
+        },
+        {   
+            id: 4,
+            title: "Jollof Rice", 
+            ingredients: ["Assorted"],
+            price: 75.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8axqt7UupYvfhL29JzERpRaALQJ82Xf9V4w&s"
+        },
+        {   
+            id: 5,
+            title: "Shawarma", 
+            ingredients: ["Chicken Vegies"],
+            price: 30.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://www.bylena.com/images/uploaded/1920x_Shaorma-de-casa-336.jpg"
+        },
+        {   
+            id: 6,
+            title: "Turn Over Pie", 
+            ingredients: ["Fish"],
+            price: 15.00, 
+            isSelected: false,
+            count: 1,
+            imageUrl: "https://foodienotachef.com/wp-content/uploads/2020/09/FlakyGhanaianMeatPie-1.png"
+        }
+    ]},
+    {id:1, imageUrl: "https://news.northeastern.edu/wp-content/uploads/2023/02/411A9994.jpg", businessName: "Alongo Fingers", street: "Madina", contact: "0556236739", wallpaper:"https://news.northeastern.edu/wp-content/uploads/2023/02/411A9994.jpg"},
+   
+]
+
+
+export function generateRandomCode(){
+    return Math.floor(Math.random() * 900) + 100;
+}

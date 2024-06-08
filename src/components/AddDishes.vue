@@ -6,8 +6,9 @@ import { waakyeCombos } from '../model/waakye_combo.js'
 import WaakyePack from '@/components/helperComponents/WaakyePack.vue'
 import PackCustomize from '@/components/PackCustomize.vue'
 import {ref} from 'vue'
-import { purchaseItemStore } from '@/store/store.js'
+import { purchaseItemStore, purchaseOrderItems } from '@/store/store.js'
 import {useRouter} from 'vue-router'
+import { restaurant } from '@/store/store.js'
    
 
  const router = useRouter()
@@ -16,9 +17,12 @@ let combos = ref(waakyeCombos);
 const isCustomerSelectionDone = ref(false)
 const comboSelected = ref(combos.value[0])
 const createCustomTapped = ref(false)
+const packs = ref(restaurant.restaurantItem.packs)
 
 function createOrder(){
     purchaseItemStore.update(comboSelected.value)
+    const selectedOrderItems = packs.value.filter((pack) => pack.isSelected == true);
+    purchaseOrderItems.updateItems(selectedOrderItems)
     router.push('/sub-total')
 }
 
@@ -27,11 +31,11 @@ function goBack(){
 }     
 
   function handlePackTapped(args){
-    const combo = args[0];
-    comboSelected.value = combo
-    for (let i=0; i<combos.value.length; i++){
-    if (combos.value[i].id === combo.id){
-        combos.value[i].isSelected = !combos.value[i].isSelected
+    const pack = args[0];
+    // comboSelected.value = combo
+    for (let i=0; i<packs.value.length; i++){
+    if (packs.value[i].id === pack.id){
+        packs.value[i].isSelected = !packs.value[i].isSelected
     }
   }
   }
@@ -49,6 +53,23 @@ function goBack(){
     console.log(ingredients)
   }
 
+  function increaseCount(args){
+    for (let i = 0; i < packs.value.length; i++) {
+    if (packs.value[i].id === args[0].id) {
+        packs.value[i].count += 1
+        
+    }
+  }
+  }
+
+
+  function decreaseCount(args){
+    for (let i = 0; i < packs.value.length; i++) {
+    if (packs.value[i].id === args[0].id) {
+        packs.value[i].count = packs.value[i].count <= 1 ? 1 : packs.value[i].count - 1
+    }
+  }
+  }
   
 
 </script>
@@ -62,19 +83,13 @@ function goBack(){
    
        
        <section class="second-sec">
-        <div class="title-and-button">
-            <p>Create your own custom pack</p>
-            <button class="create-custom-pack" @click="createCustomPack">
-               Customize Your Pack
-                </button>
-        </div>
         <div class="let-select">
                Select Fixed Pack
             </div>
 
         <div class="packs">
-            <div v-for="combo in combos" :key="combo.title">
-                <WaakyePack :pack="combo" @pack-tapped="(args)=>handlePackTapped(args)"/>
+            <div v-for="combo in packs" :key="combo.title">
+                <WaakyePack :pack="combo" @pack-tapped="(args)=>handlePackTapped(args)" @plus-tapped="(args)=>increaseCount(args)" @minus-tapped="(args)=>decreaseCount(args)"/>
                   
             </div>
         </div>

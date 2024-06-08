@@ -2,20 +2,26 @@
 
 
 <script setup>
-import {purchaseItemStore} from '@/store/store.js'
-
-function increaseQuantity(){
-    const quantity = purchaseItemStore.item.quantity + 1
-    purchaseItemStore.updateQuantity(quantity)
-}
-
+ /* eslint-disable */
+// import {purchaseItemStore} from '@/store/store.js'
+const props  = defineProps({
+    order: Object
+})
 
 
-function decreaseQuantity(){
-    const quantity = purchaseItemStore.item.quantity - 1
-    const updatedQuantity = (quantity <= 1) ? 1 : quantity;
-    purchaseItemStore.updateQuantity(updatedQuantity)
-}
+
+// function increaseQuantity(){
+//     const quantity = purchaseItemStore.item.quantity + 1
+//     purchaseItemStore.updateQuantity(quantity)
+// }
+
+
+
+// function decreaseQuantity(){
+//     const quantity = purchaseItemStore.item.quantity - 1
+//     const updatedQuantity = (quantity <= 1) ? 1 : quantity;
+//     purchaseItemStore.updateQuantity(updatedQuantity)
+// }
 
 </script>
 
@@ -26,20 +32,20 @@ function decreaseQuantity(){
 
 <div class="first-section">
     <div class="image-container">
-        <img src="@/assets/Waakye5.jpg" alt="">
+        <img :src="order?.imageUrl" alt="">
     </div>
 
     <div class="descriptions">
-        <p class="title-font">{{ purchaseItemStore.item.title }}</p>
-        <p class="description">Waakye</p>
-        <p class="price">GHS {{ purchaseItemStore.item.subtotal }}</p>
+        <p class="title-font">{{order?.title }}</p>
+        <p class="description">{{ order?.ingredients[0] }}</p>
+        <p class="price">GHS {{ order?.price * order?.count }}</p>
     </div>
 </div>
 
 
     <div class="increase-decrease-buttons">
         <div class="decrease button" @click="decreaseQuantity">-</div>
-        <p class="number">{{ purchaseItemStore.item.quantity }}</p>
+        <p class="number">{{ order?.count }}</p>
         <div class="increase button" @click="increaseQuantity">+</div>
     </div>
 

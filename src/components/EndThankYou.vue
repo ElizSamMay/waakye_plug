@@ -1,6 +1,9 @@
 <script setup>
 import {useRouter} from 'vue-router'
+import {generateRandomCode} from '@/model/waakye_combo'
+
 const router = useRouter()
+const randomCode = generateRandomCode()
 
 function goToHome(){
 router.go(-3);
@@ -10,7 +13,7 @@ router.go(-3);
 
 
 <template>
-    <div>
+    <div class="main-container">
         <section class="first-container">
                 <div>
                     <img class="thanks-logo" src="../assets/thank 1.png">
@@ -26,9 +29,11 @@ router.go(-3);
 
             <div>
              <p class="text">
-                Stay hooked, We will call you once your order  is 
-                accepted and the rider sets off on his way to your location.
-                Payment will be made to the rider once item is delivered.
+                Stay hooked, We will notify once order is completed
+             </p>
+
+             <p class="text padded">
+                Your unique code is: <span>{{ randomCode }}</span>
              </p>
             </div>
 
@@ -47,7 +52,15 @@ router.go(-3);
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
    .first-container{  
-           
+            display: flex;
+        }
+
+        .main-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70vh;
         }
         
         .thanks-logo{
@@ -90,6 +103,16 @@ router.go(-3);
             z-index: 1000;
             font-weight: bold;
             font-size: 16px;
+        }
+
+        .padded{
+            margin-top: 16px;
+        }
+
+        .padded span {
+            font-size: 32px;
+            display: block;
+            margin: 8px;
         }
         
 

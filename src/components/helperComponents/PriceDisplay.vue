@@ -23,13 +23,13 @@ import {defineProps} from 'vue'
 
     .title{
         font-size: 20px;
-        color: white;
+        color: rgb(31,31,70);
         font-size: bold;
     }
 
     .value{
         font-size: 16px;
         font-weight: bold;
-        color: white;
+        color: rgb(31,31,70);
     }
 </style>

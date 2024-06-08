@@ -5,11 +5,12 @@
     import {useRouter} from 'vue-router';
     import InputField from '@/components/helperComponents/InputField.vue'
     import PriceDisplay from '@/components/helperComponents/PriceDisplay.vue'
-    import { purchaseItemStore } from '@/store/store.js'
+    import { purchaseItemStore} from '@/store/store.js'
     import {onMounted, ref} from 'vue';
     import LoaderView from "@/components/helperComponents/LoaderView.vue"
     import {makeApiRequest, RequestMethod} from '@/shared/api_helper.js'
     import {fireSuccessAlertWithAction, fireFailureAlert} from '@/shared/alert_action.js'
+    import { purchaseOrderItems } from '@/store/store.js'
 
     const router = useRouter()
     const isLoading = ref(false)
@@ -20,6 +21,7 @@
     const showNameError = ref(false)
     const showNumberError = ref(false)
     const showLocationError = ref(false)
+    const pricesValue = ref(purchaseOrderItems.getDisplayPrices())
 
     onMounted(()=>{
         purchaseItemStore.init()
@@ -28,20 +30,21 @@
 
 
     async function handleStartButtonTapped(){
-        try{
-        isLoading.value = true
-        const order = await makeApiRequest("/order", RequestMethod.POST, purchaseItemStore.getDetailsOfDelivery(userName.value, location.value, phoneNumber.value), {}, false, "")
-        isLoading.value = false
-        if (order.status === 200){
-            fireSuccessAlertWithAction("Order Placed", ()=>{
-                router.push('/thank-you')
-            })
-        }else{
-          fireFailureAlert("Order placing failed, please try again.")
-        }} catch(err){
-            fireFailureAlert("Order placing failed, please try again.")
-        }
+        // try{
+        // isLoading.value = true
+        // const order = await makeApiRequest("/order", RequestMethod.POST, purchaseItemStore.getDetailsOfDelivery(userName.value, location.value, phoneNumber.value), {}, false, "")
+        // isLoading.value = false
+        // if (order.status === 200){
+        //     fireSuccessAlertWithAction("Order Placed", ()=>{
+        //         router.push('/thank-you')
+        //     })
+        // }else{
+        //   fireFailureAlert("Order placing failed, please try again.")
+        // }} catch(err){
+        //     fireFailureAlert("Order placing failed, please try again.")
+        // }
         
+        router.push('/confirm-details')
     }
 
 
@@ -50,13 +53,8 @@
     }
 
     function confirmOrderTapped(){
-            if (userName.value.length > 1 && location.value.length > 1 && phoneNumber.value.length > 1){
-                confirmOrder.value = true
-                return;
-            }
-
-            validate()
             
+            confirmOrder.value = true
         
     }
 
@@ -89,17 +87,13 @@
         <div class="title">Order Details</div>
 
         <div class="order-tile">
-            <div>
-                <OrderTile :food="purchaseItemStore.item"/>
+            <div class="items">
+                <div v-for="item in purchaseOrderItems.items">
+                    <OrderTile :order="item"/>
+                </div>
+                
             </div>
         </div>
-    </div>
-
-
-    <div class="break-down">
-        <InputField fieldTitle="Name of Buyer *" valiadateString="Name must not be empty" v-model="userName" @input-change="handleValidation" :showError="showNameError"/>
-        <InputField fieldTitle="Phone Number *" valiadateString="Phone number must not be empty" v-model="phoneNumber" @input-change="handleValidation" :showError="showNumberError"/>
-        <InputField fieldTitle="Location" valiadateString="location must not be empty" v-model="location" @input-change="handleValidation" :showError="showLocationError"/>
     </div>
 
     <div class="order-details" v-if="confirmOrder">
@@ -107,14 +101,14 @@
         X
       </button>
         <div class="prices">
-            <div v-for="price in purchaseItemStore.purchaseDetails" :key="price">
+            <div v-for="price in pricesValue" :key="price">
                 <PriceDisplay :pricing="price"/>
             </div>
         
         </div>
-        <button class="confirm-order-button confirm" @click="handleStartButtonTapped">Confirm Order</button>
+        <button class="confirm-order-button confirm" @click="handleStartButtonTapped">Confirm Price</button>
     </div>
-     <button class="confirm-order-button" @click="confirmOrderTapped" v-if="!confirmOrder">Confirm Price</button>
+     <button class="confirm-order-button" @click="confirmOrderTapped" v-if="!confirmOrder">Confirm Order</button>
 
     </div>
     
@@ -127,13 +121,13 @@
 <style scoped>
 
   .close-button {
-  color: white;
+  color: rgb(31, 31, 70);
   background-color:transparent;
   border: none;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid rgb(31, 31, 70);
   position: absolute;
   right: 16px;
   top: 16px
@@ -142,8 +136,8 @@
     .confirm-order-button{
         position: fixed;
         bottom: 16px;
-        background-color: rgb(31, 31, 70);
-        color: white ;
+        background-color:white ;
+        color: rgb(31, 31, 70);
         left: 16px;
         right: 16px;
         border: none;
@@ -154,17 +148,18 @@
     }
 
      .confirm{
-     color: rgb(31, 31, 70);
-     background-color: white;
+     color: white;
+     background-color: rgb(31, 31, 70);
    }
 
 
     .container-holder{
         /* padding: 16px; */
-       height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         gap: 16px;
+        
     }
 
     .top-section{
@@ -194,7 +189,7 @@
     }
 
     .order-details{
-        background-color: rgb(31, 31, 70);
+        background-color: white;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -209,6 +204,12 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
     }
 
 </style>
