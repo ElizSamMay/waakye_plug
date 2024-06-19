@@ -2,6 +2,7 @@
 
 import {createMemoryHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
+import WhatDoYouLike from '../components/WhatDoYouLike.vue';
 import AddDishes from '../components/AddDishes.vue';
 import SubtotalSection from '../components/SubtotalSection.vue';
 import PackCustomize from '../components/PackCustomize.vue';
@@ -17,6 +18,11 @@ const router = createRouter({
             path: '/',
             name: 'home',
             component: HomePage 
+        },
+        {
+            path: '/order-prefered',
+            name: 'orderPrefered',
+            component: WhatDoYouLike
         },
         {
             path: '/add-dishes',

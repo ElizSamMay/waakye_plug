@@ -14,12 +14,13 @@
 
 
 <template>
+
  
   <div class="main-container">
     <div class="child-container">
         <section class="firstSec">
         <div class="image-handler">
-            <img class="headerpic" src="../assets/" >
+            <img class="headerpic" src="../assets/the_community-logo2.png">
         </div>
     </section>
 
