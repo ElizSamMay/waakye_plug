@@ -6,7 +6,7 @@
 
 
     function handleStartButtonTapped(){
-        router.push('/add-dishes')
+        router.push('/order-prefered')
     }
 
 </script>

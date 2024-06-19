@@ -1,113 +1,213 @@
 
 <template>
-<div>
 
-     <input class="searchbar" type="text"placeholder="find your favorate foodseat">
-
-<section  class="mother-container">
-    <div class="picture-preview">
-        <div>
-            <img class="display-picture" src="../assets/waakye_in_bowl.png">
-        </div>
-
-        <div class="profile-container"> 
-            <div class="profle-pic-container">
-                <img class="profle-pic" src="../assets/logo.png">
-            </div>
-
-            <div class="title-zone">  
-                <p class="restaurants-name">
-                    Afrifingers Restaurants
-                </p>
-
-                <div class="location-zone"> 
-                     <img class="loc" src="https://www.shutterstock.com/image-vector/pin-point-logo-can-be-600nw-1679653036.jpg">
-                    <p class="location">Madina-GRA Warehouse</p>
-                </div>
-              
-                <p class="shop-title">Chef Made</p>
-                <p class="details">Good Chicken & More!</p>
-            </div>
+<div class="main-parent-container">
+        <div class="title"> Food & Snacks </div>
+        <input class="searchbar" type="text" placeholder="find your favorate restaurants">
+        <button class="search-button">Search</button>
+    
+        <div class="shops">
+            <div >
+                <div class="main-container-holder" @click="goToRestaurantPage">
+                    <div class="image-and-details">
+                        <div class="image-holder">
+                            <img src="../assets/rest1.jpeg">
+                        </div>
             
-          
+                        <div class="details">
+                            <div class="header">Liberty Restaurant</div>
+                            <div class="sub-detail">Akim-Oda Liberty</div>
+                            <div class="sub-detail">0234548948</div>
+                        </div>
+                    </div>
+            
+                    <div class="caret">
+                        <img src="../assets/caret-forward.png">
+                    </div>
+                </div>
+            
+            </div>
         </div>
-    </div>
-</section>
+
+
+        <div class="shops">
+            <div >
+                <div class="main-container-holder" @click="goToRestaurantPage">
+                    <div class="image-and-details">
+                        <div class="image-holder">
+                            <img src="../assets/rest2.jpeg">
+                        </div>
+            
+                        <div class="details">
+                            <div class="header">Hospital Canteen</div>
+                            <div class="sub-detail">Akim-Oda Roman Rd</div>
+                            <div class="sub-detail">0234548948</div>
+                        </div>
+                    </div>
+            
+                    <div class="caret">
+                        <img src="../assets/caret-forward.png">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div class="shops">
+            <div >
+                <div class="main-container-holder" @click="goToRestaurantPage">
+                    <div class="image-and-details">
+                        <div class="image-holder">
+                           <img src="../assets/foodpic.png">
+                        </div>
+            
+                        <div class="details">
+                            <div class="header">Stop Over</div>
+                            <div class="sub-detail">Akim-Oda Barrier</div>
+                            <div class="sub-detail">0234548948</div>
+                        </div>
+                    </div>
+            
+                    <div class="caret">
+                        <img src="../assets/caret-forward.png">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div class="shops">
+            <div >
+                <div class="main-container-holder" @click="goToRestaurantPage">
+                    <div class="image-and-details">
+                        <div class="image-holder">
+                           <img src="../assets/pizza.jpeg">
+                        </div>
+            
+                        <div class="details">
+                            <div class="header">Ryce Under</div>
+                            <div class="sub-detail">Akim-Oda Aboabo</div>
+                            <div class="sub-detail">0234548948</div>
+                        </div>
+                    </div>
+            
+                    <div class="caret">
+                        <img src="../assets/caret-forward.png">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
 
 
         
-</template>
+    </div>
 
+    
+</template>
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .mother-container{
-        padding: 30px;
-        
-        
-       }
-        .display-picture{
-            width: 100%;
-            background-color: rgb(31, 31, 70); 
+  .main-parent-container{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 16px;
+            height: 100vh;
+            background-color: rgb(21, 156, 197);
+        }
+    
+        .title{
+            color: white;
+            font-size: 32px;
+            
            
         }
-        .picture-preview{
-           /* width: 300px;  */
-           
-           
+        .searchbar{
+            font-size: 15px;
+            width: 250px;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 20px;
         }
-        .profle-pic{
-            width: 100%;
-            border-radius: 40px;
+        .search-button{
+            color: white;
+            background-color:rgb(21,223, 236) ;
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            margin-top: 20px;
         }
-        .profile-container{
+    
+        .shops{
+            overflow-y: scroll;
             display: flex;
-            gap: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
         }
-        .profle-pic-container{
-            
-             width: 50px; 
-             vertical-align: top;
-
-        }
-        .title-zone{
-             width: 250px;
-             line-height: 5px;
-        }
-        .restaurants-name{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .location-zone{
+        .main-container-holder{
+            padding: 16px;
+            border: 1px solid white;
+            border-radius: 16px;
             display: flex;
-            gap: 5px;
+            justify-content: space-between;
+            background-color: rgb(21,223, 236);
+            align-items: center;
         }
-        .loc{
-            
-            width: 30px;
+
+        .sub-detail{
+            color: rgb(115, 103, 116);
         }
-        .location{
-            
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            font-weight: bold;
+
+        .caret{
+            border: 3px solid rgb(21, 156, 197);
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .shop-title{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            font-weight: bold;
-            color: rgb(31, 31, 70);
+
+        .image-holder{
+            height: 100px;
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 16px;
         }
+
+        .image-holder img{
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+
+        .image-and-details{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .details{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-            font-weight: bold;
-            color: rgb(154, 154, 182);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            gap: 8px;
         }
 
+        .header{
+            color: white;
+            font-weight: bold;
+
+        }
+
+        .caret img{
+            height: 12px;
+            width: 8px;
+        }
+      
+        
 </style>
