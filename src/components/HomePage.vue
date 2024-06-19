@@ -19,21 +19,20 @@
     <div class="child-container">
         <section class="firstSec">
         <div class="image-handler">
-            <img class="headerpic" src="../assets/Waakyeplate-homepge.png" >
+            <img class="headerpic" src="../assets/" >
         </div>
     </section>
 
     <section class="second-sec">
         <div>
             <div>
-                <p class="text1">Your no. 1 Waakye Plug.</p>
+                <p class="text1">Your Errands at Hand.</p>
             </div>
         </div>
 
 
         <div class="text-2-comp">
-            <P class="text2">Feel the taste of some of the nicest waakye
-             in Accra at the comfort of your home.</P> 
+            <P class="text2">Delivering love and care, right to your cozy corner !.</P> 
 
             <p class="text3" >Thinking of payment 🤔 ?, don’t stress, 
             <span  class="edit"> We take payment upon delivery.</span></P> 
@@ -45,7 +44,7 @@
     <section class="lastSec">
 
         <div class="bottom-button"> 
-            <button @click="handleStartButtonTapped">Get Waakye</button>
+            <button @click="handleStartButtonTapped">Let Get it</button>
         </div>
 
     </section>
