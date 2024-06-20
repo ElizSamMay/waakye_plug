@@ -3,7 +3,7 @@ import {useRouter} from 'vue-router'
 const router = useRouter()
 
 function goToHome(){
-router.go(-3);
+router.go(-4);
 }
 
 </script>
@@ -81,7 +81,8 @@ router.go(-3);
         .buttom-button{
             position: fixed;
             bottom: 10px;
-            background-color: white;
+            background-color: rgb(60, 177, 128);
+            color: white;
             left: 16px;
             right: 16px;
             border: none;

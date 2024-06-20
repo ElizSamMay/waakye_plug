@@ -142,7 +142,7 @@
     .confirm-order-button{
         position: fixed;
         bottom: 16px;
-        background-color: rgb(31, 31, 70);
+        background-color: rgb(60, 177, 128);
         color: white ;
         left: 16px;
         right: 16px;
@@ -154,8 +154,8 @@
     }
 
      .confirm{
-     color: rgb(31, 31, 70);
-     background-color: white;
+     color: white;
+     background-color: rgb(60, 177, 128);
    }
 
 
@@ -194,7 +194,7 @@
     }
 
     .order-details{
-        background-color: rgb(31, 31, 70);
+        background-color: rgb(21, 156, 197);
         position: fixed;
         bottom: 0;
         left: 0;

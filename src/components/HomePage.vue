@@ -20,7 +20,7 @@
     <div class="child-container">
         <section class="firstSec">
         <div class="image-handler">
-            <img class="headerpic" src="../assets/the_community-logo2.png">
+            <img class="headerpic" src="../assets/thecommunitylogo2.png">
         </div>
     </section>
 
@@ -42,7 +42,7 @@
     </section>
 
 
-    <section class="lastSec">
+    <section class="lastSec">  
 
         <div class="bottom-button"> 
             <button @click="handleStartButtonTapped">Let Get it</button>
@@ -71,7 +71,7 @@
         
 
         .image-handler{
-            width: 170px;
+            width: 150px;
             position: absolute;
             left: 0;
             top: 0;
@@ -88,7 +88,7 @@
             padding:  16px;
             display: flex;
             flex-direction: column;
-            height: 3rem; 
+            /* height: 3rem;  */
             gap: 30px;
             
 
@@ -110,7 +110,7 @@
         
 
         .text2,.text3{
-            font-family: Arial, Helvetica, sans-serif;
+           
             font-size: 1rem;
 
         }
@@ -138,7 +138,8 @@
             font-size: 16px;
             border-radius: 32px;
             font-weight: bold;
-            color: rgb(31, 31, 70)
+            background-color: rgb(60, 177, 128);
+            color:white;
         }
 
         

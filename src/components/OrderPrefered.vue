@@ -1,4 +1,23 @@
+<script setup>
+    import {useRouter} from 'vue-router'
+   
 
+    const router = useRouter()
+
+
+    function goToRestaurantPage(){
+        router.push('/various-restaurants')
+    }
+
+    function goToSupermarketPage(){
+        router.push('/various-supermarket')
+    }
+
+    function goToPharmacyPage(){
+        router.push('/various-pharmacy')
+    }
+    
+</script>
 
 <template>
 
@@ -6,25 +25,26 @@
         <div id="parent">
             <section class="parent-container">
                 <p>What would you like to order ?</p>
-                <div class="walk-in">
+
+                <div class="select-restaurant" @click="goToRestaurantPage">
                     
                     <img class="foodlogo" src="../assets/food-.png">
                      Food & Snacks 
                 </div>
         
-                <div class="walk-in">
+                <div class="select-shop" @click="goToSupermarketPage">
                     
                     <img class="foodlogo"  src="../assets/grocshoppingcart.png">
                     Supermarket & Groceries
                 </div>
 
-                <div class="walk-in">
+                <div class="select-drugstore" @click="goToPharmacyPage">
                     
                     <img class="foodlogo"  src="../assets/pharmacydrug.png">
                     Pharmacy
                 </div>
 
-                <div class="walk-in">
+                <div class="select-delivery" @click="goToRestaurantPage">
                     
                     <img class="foodlogo"  src="../assets/rider.png">
                     Delivery
@@ -42,34 +62,31 @@
 <style scoped>
    body{
                
-               background-color: rgb(21, 156, 197);
+               
                display: flex;
                justify-content: center;
                align-items: center;
-               height: 100vh;
+               
            
            }
            .parent-container{
-               font-family: Arial, Helvetica, sans-serif;
                display: flex;
                gap: 32px;
                flex-direction: column;
-               padding: 20px;
+               padding: 50px;
                align-items: center;
                justify-content: center;
-               background-color: white;
-               border-radius: 16px;
+               background-color: rgb(197, 238, 224);
+               
                
               
            }
-           .walk-in{
-               font-family: Arial, Helvetica, sans-serif;
-               /* border: 1px solid black; */
-               width: 200px; 
-               /* padding: 20px; */
+           .select-delivery, .select-restaurant,.select-shop,.select-drugstore{
+               font-weight: bold;
+               padding: 20px;
+               width: 250px; 
                display: flex;
                flex-direction: column;
-               /* justify-content: center; */
                background-color: rgb(21,223, 236);
                color: white;
                border-radius: 4px;
@@ -80,11 +97,12 @@
            }
 
            .foodlogo{
+               
                width: 40%;
            }
        
            section p:nth-child(1){
-               font-size: 16px;
+               font-size: 20px;
                font-weight: bold;
            }
            

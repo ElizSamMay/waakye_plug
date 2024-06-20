@@ -168,7 +168,7 @@ function previewItems(){
   bottom: 32px;
   left: 16px;
   right: 16px;
-  background-color: rgb(31, 31, 70);
+  background-color: rgb(60, 177, 128);
   color: white;
 }
 

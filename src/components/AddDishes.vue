@@ -49,16 +49,24 @@ function goBack(){
     console.log(ingredients)
   }
 
-  
+   function toBack(){
+        router.go(-1)
+    }
 
 </script>
 
 
 <template>
     <div v-if="!isCustomerSelectionDone">
+         <button class="back-button" @click="toBack">Back</button>
+        
     <section class="image-container">
-           <img class="headerpic" src="../assets/waakye_in_bowl.png">
+           <img class="headerpic" src="../assets/rest1.jpeg">
     </section>
+
+     <div class="restaurant-name">
+        <p>Liberty Restaurant - Akim-Oda Liberty</p>
+    </div>
    
        
        <section class="second-sec">
@@ -96,6 +104,22 @@ function goBack(){
    
    <!-- Add "scoped" attribute to limit CSS to this component only -->
    <style scoped>
+        .restaurant-name{
+            background-color: rgb(21,223, 236);
+            font-size: 16px;
+            color: white;
+            padding: 16px;
+            font-weight: bold;
+        }
+        
+        .back-button{
+        background-color: white;
+        border: none;
+        width: 100px;
+        padding: 8px 0;
+        border-radius: 8px;
+        font-weight: bold;
+    }
 
         .image-container{
             width: 100%;
@@ -120,7 +144,7 @@ function goBack(){
             left: 16px;
             right: 16px;    
             z-index: 1000;  
-            background-color: rgb(31, 31, 70);
+            background-color:  rgb(60, 177, 128);
             color: white;  
         }
 
@@ -151,7 +175,7 @@ function goBack(){
             border-radius: 32px;
             font-size: 16px;
             font-weight: bold;
-            background-color: rgb(31, 31, 70);
+            background-color:  rgb(60, 177, 128);
             color: white;
             margin: 16px;
         }

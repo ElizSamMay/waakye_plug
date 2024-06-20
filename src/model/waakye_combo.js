@@ -2,48 +2,48 @@
 export const waakyeCombos = [
     {   
         id: 0,
-        title: "Waakye Combo", 
-        ingredients: ["waakye", "wele", "egg","sausage","salad","gari",  ],
+        title: "Jollof with fish", 
+        ingredients: [ "fish","coleslaw" ],
         price: 30.00, 
         isSelected: true
     },
     
     {   
         id: 1,
-        title: "Waakye Super", 
-        ingredients: ["waakye", "fish","wele", "egg",  "salad","macroni", "gari"],
+        title: "Jollof with chicken", 
+        ingredients: [ "chicken","coleslaw"],
         price: 41.00, 
         isSelected: false
     },
 
     {   
-        id: 4,
-        title: "Waakye Capo", 
-        ingredients: ["waakye", "chicken","wele", "egg",  "salad","macroni", "gari"],
+        id: 2,
+        title: "Assorted Jollof", 
+        ingredients: [ "chicken","sausage", "egg",  "coleslaw"],
         price: 41.00, 
         isSelected: false
     },
 
     {   
-        id: 5,
-        title: "Waakye Gooda", 
-        ingredients: ["waakye", "meat","wele", "egg",  "salad","macroni", "gari"],
+        id: 3,
+        title: "Friedrice with chicken", 
+        ingredients: [ "chicken","coleslaw"],
         price: 41.00, 
         isSelected: false
     },
     
     {   
-        id: 2,
-        title: "Waakye Mega", 
-        ingredients: ["waakye", " fish","meat", "egg", "wele", "salad","macroni", "gari"],
-        price: 55.00, 
+        id: 4,
+        title: "Assorted Friedrice", 
+        ingredients: [ "chicken","sausage", "egg",  "coleslaw"],
+        price: 41.00, 
         isSelected: false
     },
     {   
-        id: 3,
-        title: "Waakye Agadoo", 
-        ingredients: ["waakye", "fish", "meat", "egg","chicken", "wele", "salad","macroni", "gari","wagashi"],
-        price: 75.00, 
+        id: 5,
+        title: "Shawarma", 
+        ingredients: [ "meat", "egg","chicken", "salad",],
+        price: 30.00, 
         isSelected: false
     },
     
