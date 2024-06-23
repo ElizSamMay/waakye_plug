@@ -97,6 +97,7 @@
 
         .haburg{
             background-color: rgb(233, 102, 194);
+            border: 3px solid rgb(253, 216, 253);
             border-radius: 5px;
             width: 40px;
         }
@@ -106,23 +107,7 @@
             justify-content: space-around;
             gap: 15px;
             align-items: center;   
-        }
-         .home-page,
-         .our-servicepage,
-         .trainig-page,
-         .visit-page{
-            
-            font-size: 11px;
-            font-weight: 550;
-            color: white;
-            align-content: center;
-            text-align: center;
-            border-radius: 5px; 
-            width: 60px;
-            background-color: palevioletred;
-            height:25px;
-              
-        } 
+         }
         
         .second-child{
           
