@@ -1,7 +1,7 @@
 
 
 import {createMemoryHistory, createRouter} from 'vue-router'
-import HomePage from '../components/HomePage.vue';
+// import HomePage from '../components/HomePage.vue';
 import OrderPrefered from '../components/OrderPrefered.vue';
 import VariousRestaurants from '../components/VariousRestaurants.vue';
 import VariousPharmacy from '../components/VariousPharmacy.vue';
@@ -10,6 +10,7 @@ import AddDishes from '../components/AddDishes.vue';
 import SubtotalSection from '../components/SubtotalSection.vue';
 import PackCustomize from '../components/PackCustomize.vue';
 import EndThankYou from '../components/EndThankYou.vue';
+import Lush from '../components/lash-it-loud/LashitLoud.vue'
 
 
 
@@ -20,7 +21,7 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: HomePage 
+            component: Lush
         },
         {
             path: '/order-prefered',
