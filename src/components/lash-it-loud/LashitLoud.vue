@@ -7,47 +7,7 @@
             
             <img class="haburg" src="../../assets/images/whitehambeger1 (2).png">
            
-           
-<!--         
-            <div class="first-child">
-                <p class="home-page">
-                   HOME
-                </p>
 
-                <p class="our-servicepage">
-                    OUR SERVICES
-                </p>
-
-                <p class="trainig-page">
-                    TRAINING
-                </p>
-
-                <p class="visit-page">
-                   VISIT US
-                </p>
-
-            </div> -->
-
-
-<!--         
-            <div class="first-child">
-                <p class="home-page">
-                   HOME
-                </p>
-
-                <p class="our-servicepage">
-                    OUR SERVICES
-                </p>
-
-                <p class="trainig-page">
-                    TRAINING
-                </p>
-
-                <p class="visit-page">
-                   VISIT US
-                </p>
-
-            </div> -->
 
              <div class="second-child">
                <button class="lasecbutt">BOOK NOW</button>
@@ -59,7 +19,7 @@
 
     <section>
         <div class="main-page">
-            <img class="picxx" src="../../assets/images/cp1.jpg" /> 
+            <img class="picxx" src="../../assets/images/cp1.jpg"> 
             <img class="picxx" src="../../assets/images/cp2.jpg">
             <img class="picxx" src="../../assets/images/cp3.jpg">
             <img class="picxx" src="../../assets/images/cp4.jpg">
@@ -82,9 +42,18 @@
 
 
     <section class="last-container">
+       
         <div class="text">
-            Powered by LUMINAEA GROUP INC.
+        
         </div>
+        <div class="text">
+           
+        </div>
+    </section>
+
+
+    <section class="last-container">
+       
         <div class="text">
          © Lash_it loud Beauty Studio - North Legon 2024
         </div>
@@ -94,6 +63,7 @@
     </section>
         
     </div>
+    
 
 </template>
 
@@ -122,12 +92,13 @@
         .main-page{
             position: relative;
             top: 80px;
+            
         }
 
         .haburg{
             background-color: rgb(233, 102, 194);
             border-radius: 5px;
-            width: 30px;
+            width: 40px;
         }
        
          .first-child{
@@ -178,7 +149,7 @@
 
         .last-container{
         background-color: pink;
-        padding: 20px;
+        padding: 15px;
        
        }
 
@@ -186,7 +157,7 @@
         font-size: 10px;
         font-weight: 550;
         color: rgb(131, 131, 131);
-        padding: 20px; 
+        padding: 10px; 
        
        }
 
