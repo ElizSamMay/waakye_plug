@@ -13,7 +13,7 @@
 
 <style>
 #app {
-  background-color: rgb(21, 156, 197);
+ background-color: black;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
