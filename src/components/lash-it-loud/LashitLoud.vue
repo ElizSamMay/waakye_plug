@@ -1,16 +1,69 @@
+<script setup>
+/* eslint-disable */
+    import {useRouter} from 'vue-router'
+    import {ref} from 'vue';
+
+
+    const router = useRouter()
+
+    function goToBookingPage(){
+            router.push('/book-now')
+            }
+
+   
+    const hideNav = ref(false)
+    function handlehamergerButtonTapped(){
+        
+     hideNav.value = false
+
+    const mobileMenu = document.querySelector('.mobile-nav');
+
+    const hamburgerMenu = document.querySelector('.hamburger');
+    hamburgerMenu.addEventListener('click', function () {
+        hamburgerMenu.classList.toggle('is-active');
+        mobileMenu.classList.toggle('is-active');
+    });
+
+    }
+
+    
+    function removeNav(){
+      hideNav.value = true
+    }
+      
+    </script>
+
 
 <template>
 
  <div class="main-component">
+    
     <section>
         <div class="main-parent-container">
-            
-            <img class="haburg" src="../../assets/images/whitehambeger1 (2).png">
-           
+             <button class="hamburger" @click="handlehamergerButtonTapped">
+                    <div class="bar"></div>
+                </button>
+
+                <nav class="mobile-nav" v-show="!hideNav">
+
+                    <div class="lashlogo">
+                   <img class="picxxs" src="../../assets/images/lashlogo.jpeg">
+                    </div>
+
+                    <a href="a">Home</a>
+                    <a href="#first" @click="removeNav">Our Services</a>
+                    <a href="#second" @click="removeNav">Loud School</a>
+                    <a href="#third" @click="removeNav">Visit Us</a>
+                    <a href="a">Talk to us</a>
+
+                </nav>
 
 
-             <div class="second-child">
-               <button class="lasecbutt">BOOK NOW</button>
+             <div class="second-child" >
+               <button class="lasecbutt" @click="goToBookingPage">
+
+                BOOK NOW
+                </button>
               </div>
             
         </div>
@@ -18,9 +71,9 @@
 
 
     <section>
-        <div class="main-page">
-            <img class="picxx" src="../../assets/images/cp1.jpg"> 
-            <img class="picxx" src="../../assets/images/cp2.jpg">
+        <div class="main-page" @click="handlehamergerButtonTapped">
+            <img class="picxx"  src="../../assets/images/cp1.jpg"> 
+            <img class="picxx" id="first" src="../../assets/images/cp2.jpg">
             <img class="picxx" src="../../assets/images/cp3.jpg">
             <img class="picxx" src="../../assets/images/cp4.jpg">
             <img class="picxx" src="../../assets/images/cp5.jpg">
@@ -31,8 +84,8 @@
             <img class="picxx" src="../../assets/images/cp10.jpg">
             <img class="picxx" src="../../assets/images/cp11.jpg">
             <img class="picxx" src="../../assets/images/cp12.jpg">
-            <img class="picxx" src="../../assets/images/cp13.jpg">
-            <img class="picxx" src="../../assets/images/cp14.jpg">
+            <img class="picxx" id="second" src="../../assets/images/cp13.jpg">
+            <img class="picxx" id="third" src="../../assets/images/cp14.jpg">
             <img class="picxx" src="../../assets/images/cp15.jpg">
             <img class="picxx" src="../../assets/images/cp16.jpg">
             
@@ -95,11 +148,81 @@
             
         }
 
-        .haburg{
-            background-color: rgb(233, 102, 194);
+
+        
+
+        .hamburger{
+            position: relative;
+            width: 45px;
+            appearance: none;
+            background-color:rgb(167, 167, 167) ;
             border: 3px solid rgb(253, 216, 253);
-            border-radius: 5px;
-            width: 40px;
+            border-radius: 10px;
+           
+            
+            
+        }
+        .hamburger .bar, .hamburger:after, .hamburger:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .hamburger.is-active:before {
+            transform: rotate(-45deg) translate(-8px, 6px);
+        }
+
+        .hamburger.is-active:after {
+            transform: rotate(45deg) translate(-9px, -8px);
+        }
+
+        .hamburger.is-active .bar{
+            opacity: 0;
+
+        }
+        .mobile-nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            top: 30px;
+            right: 100%;
+            width: 100%;
+            min-height: 90vh;
+            z-index:1000;
+            background-color: rgb(247, 192, 200);
+            margin-top: 35px;
+            transition: 0.9s;
+        }
+        .lashlogo{
+            width: 100%;
+            height: 200px;
+
+        }
+        .picxxs{
+        width: 100%;
+        height: 100%;
+       }
+
+        .mobile-nav.is-active {
+            right: 0;
+        }
+
+        .mobile-nav a {
+            /* display: block; */
+            text-align: center;
+            margin: 0 auto 12px;
+            width: 100%;
+            max-width: 200px;
+            padding:12px 15px ;
+            background-color:rgb(233, 102, 194) ;
+
+            color: white;
+            text-decoration: none;
+
         }
        
          .first-child{
@@ -133,7 +256,7 @@
         }
 
         .last-container{
-        background-color: pink;
+        background-color: rgb(245, 235, 235);
         padding: 15px;
        
        }
