@@ -12,9 +12,22 @@ function gotoDashboard(){
 
 <template>
   <div class="main-template-holder">
+
     <div class="left-section">
+         
+      <img src="../assets/sign-up-image.svg" alt="">
+                
+      <div class="description-title-col">
+                <p class="mini-title">Let's get you on</p>
+                <p class="desc-title">Sign up to experience a new digitalization chapter with us</p>
+        </div>
+    
+
+    </div>
+
+    <div class="right-section">
       <p class="title-large">Create Your Restaurant</p>
-      <p class="sub-title">Start by creating an account for your restaurant</p>
+  
 
       <div class="break-down">
         <AdminInputField
@@ -56,39 +69,42 @@ function gotoDashboard(){
       </button>
     </div>
 
-    <div class="right-section">
-            <div class="right-holder">
-                    <div class="image-holder">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-            </div>
-
-    </div>
+    
   </div>
 </template>
 
 <style scoped>
 .main-template-holder {
-background: rgb(0,0,0);
- background: linear-gradient(331deg, rgba(0,0,0,1) 83%, rgba(72,60,111,1) 100%);
   height: 100vh;
   display: flex;
-  padding: 32px;
-  color: white;
+
 }
 
-.left-section,
+
 .right-section {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
+}
+
+.left-section{
+   width: 65%;
+   background-color: #FDB149;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 16px;
+
 }
 
 .title-large {
   font-weight: bold;
   font-size: 32px;
+  padding-bottom: 16px;
 }
 
 .break-down {
@@ -101,15 +117,13 @@ background: rgb(0,0,0);
 
 .buttom-button {
   width: 70%;
-  background-color: white;
-
+  background-color: black;
   border: none;
   padding: 16px;
-  border-radius: 32px;
-
-  font-weight: bold;
+  border-radius: 6px;
   font-size: 16px;
   margin-top: 32px;
+  color: white;
 }
 
 .right-holder{
@@ -125,14 +139,12 @@ background: rgb(0,0,0);
 }
 
 .image-holder{
-    height: 100%;
-    width: 100%;
+   background-color: red;
 }
 
 .image-holder img{
-    height: 100%;
-    width: 100%;
-    border-radius: 32px;
+   
+   
 }
 
 @media screen and (max-width: 950px) {

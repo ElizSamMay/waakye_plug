@@ -9,7 +9,7 @@ import router from '@/router';
 const stores = ref(shops)
 
 onMounted(()=>{
-    router.push('/admin')
+    router.push('/admin-land')
 })
 </script>
 

@@ -12,6 +12,7 @@ import OrderStyle from '@/components/OrderStyle.vue';
 import ConfirmUserDetails from '@/components/ConfirmUserDetails.vue'
 import AdminSignUp from '@/admin/AdminSignUp.vue';
 import AdminDashboard from '@/admin/AdminDashboard.vue';
+import AdminLandingPage from '@/admin/AdminLandingPage.vue';
 
 
 
@@ -24,6 +25,7 @@ const router = createRouter({
             name: 'home',
             component: VariousRestaurants 
         },
+        
         {
             path: '/add-dishes',
             name: 'addDishes',
@@ -73,7 +75,12 @@ const router = createRouter({
             path: '/dashboard',
             name:'dashboard',
             component: AdminDashboard
-        }
+        },
+        {
+            path: '/admin-land',
+            name: 'admin-landing-page',
+            component: AdminLandingPage
+        },
 
         
 

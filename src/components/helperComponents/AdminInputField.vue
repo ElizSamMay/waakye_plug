@@ -38,6 +38,7 @@ import {defineModel, defineProps} from 'vue'
     font-size: 0.9rem;
     color: rgba(256, 256, 256, 0.7);
     padding-bottom: 8px;
+    color: #696F79
 }
 
 .input-holder{
@@ -45,14 +46,14 @@ import {defineModel, defineProps} from 'vue'
 }
 
 input{
-    height: 90%;
+    height: 100%;
     width: 100%;
     outline: none;
-    background-color: rgba(58, 58, 59, 1);
     border-radius: 8px;
-    border:  none;
+    border:  1px solid #8692A6;
     padding: 8px;
-    color: white;
+
+    
 }
 
 .validate{
