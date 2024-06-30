@@ -5,11 +5,14 @@
 
     const router = useRouter()
 
+function goToBookAppointmentPage(){
+            router.push('/book-appointment')
+            }
+
 
  function goBack(){
         router.go(-1)
     }
- 
 </script>
 
 <template>
@@ -23,9 +26,9 @@
             <section class="parent-container">
                 <p>What would you like to Book ?</p>
 
-                <div class="select-lashappointment" @click="goToRestaurantPage">
+                <div class="select-lashappointment" @click="goToBookAppointmentPage">
                     <img class="selogo"  src="../../assets/images/bookappiontment.png">
-                  Book Appoitment 
+                  Book Appointment 
                 </div>
         
                 <div class="select-trainningschool" @click="goToSupermarketPage">

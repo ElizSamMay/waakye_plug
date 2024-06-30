@@ -1,10 +1,6 @@
 
 
 import {createMemoryHistory, createRouter} from 'vue-router'
-// import HomePage from '../components/HomePage.vue';
-// import OrderPrefered from '../components/OrderPrefered.vue';
-import VariousRestaurants from '../components/VariousRestaurants.vue';
-import VariousPharmacy from '../components/VariousPharmacy.vue';
 import VariousSupermarket from '../components/VariousSupermarket.vue';
 import AddDishes from '../components/AddDishes.vue';
 import SubtotalSection from '../components/SubtotalSection.vue';
@@ -12,6 +8,7 @@ import PackCustomize from '../components/PackCustomize.vue';
 import EndThankYou from '../components/EndThankYou.vue';
 import Lush from '../components/lash-it-loud/LashitLoud.vue';
 import BookNow from '../components/lash-it-loud/BookNow.vue';
+import BookAppointment from '../components/lash-it-loud/BookAppointment.vue';
 
 
 
@@ -31,20 +28,16 @@ const router = createRouter({
             component: BookNow
         },
         {
-            path: '/various-pharmacy',
-            name: 'variouspharmacy',
-            component: VariousPharmacy
+            path: '/book-appointment',
+            name: 'bookappointment ',
+            component: BookAppointment 
         },
         {
             path: '/various-supermarket',
             name: 'varioussupermarket',
             component: VariousSupermarket
         },
-        {
-            path: '/various-restaurants',
-            name: 'variousrestaurants',
-            component: VariousRestaurants
-        },
+        
         {
             path: '/add-dishes',
             name: 'addDishes',

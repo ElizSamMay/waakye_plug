@@ -15,7 +15,7 @@
 #app {
  background-color: black;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 router-view {

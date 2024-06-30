@@ -50,7 +50,7 @@
                    <img class="picxxs" src="../../assets/images/lashlogo.jpeg">
                     </div>
 
-                    <a href="a">Home</a>
+                    <a href="#mainpage" @click="removeNav">Home</a>
                     <a href="#first" @click="removeNav">Our Services</a>
                     <a href="#second" @click="removeNav">Loud School</a>
                     <a href="#third" @click="removeNav">Visit Us</a>
@@ -72,8 +72,8 @@
 
     <section>
         <div class="main-page" @click="handlehamergerButtonTapped">
-            <img class="picxx"  src="../../assets/images/cp1.jpg"> 
-            <img class="picxx" id="first" src="../../assets/images/cp2.jpg">
+            <img class="picxx"  id="mainpage" src="../../assets/images/cp1.jpg"> 
+            <img class="picxx" id="first" src="../../assets/images/ourserpik.jpeg">
             <img class="picxx" src="../../assets/images/cp3.jpg">
             <img class="picxx" src="../../assets/images/cp4.jpg">
             <img class="picxx" src="../../assets/images/cp5.jpg">
@@ -85,7 +85,7 @@
             <img class="picxx" src="../../assets/images/cp11.jpg">
             <img class="picxx" src="../../assets/images/cp12.jpg">
             <img class="picxx" id="second" src="../../assets/images/cp13.jpg">
-            <img class="picxx" id="third" src="../../assets/images/cp14.jpg">
+            <img class="picxx" id="third" src="../../assets/images/visitpic.jpeg">
             <img class="picxx" src="../../assets/images/cp15.jpg">
             <img class="picxx" src="../../assets/images/cp16.jpg">
             
