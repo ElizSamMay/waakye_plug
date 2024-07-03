@@ -95,7 +95,7 @@
 
        .saloon{
         
-         height: 220px;
+         height: 100% ;
        }
       
        
@@ -122,14 +122,14 @@
 
        }
        .child-container{
-        position: relative;
+    
         display: flex;
         flex-direction: column;
         gap: 10px;
         background-color: white;
         height: 50vh;
-        overflow-y: scroll;
-        /* margin-top: 20px; */
+       
+       
        }
        .servicetext{
         background-color: rgb(245, 245, 195);
@@ -138,10 +138,11 @@
         font-weight: bolder;
         padding: 10px;
        }
+
        .bookingszone{
         display: flex;
         gap: 10px;
-        justify-content: space-around;
+        justify-content: space-between;
         align-content: center;
         height: 100px;
         width: 420px;
@@ -149,6 +150,7 @@
        }
 
        .pickservices, .pickservices1, .pickservices2{
+        position: relative;
         height: 100%;
         width: 100%;
         border: none;
@@ -174,7 +176,7 @@
             padding: 10px;
             border: 2px solid rgb(59, 18, 18);
             border-radius: 20px;
-            margin-top: 0;
+            
         }
         
         .first{
