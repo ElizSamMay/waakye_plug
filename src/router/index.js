@@ -1,7 +1,7 @@
-
+/* eslint-disable */
 
 import {createMemoryHistory, createRouter} from 'vue-router'
-import HomePage from '../components/HomePage.vue';
+import HomeLuminaea from '../components/LuminaeaG.Inc/HomeLuminaea.vue';
 import OrderPrefered from '../components/OrderPrefered.vue';
 import VariousRestaurants from '../components/VariousRestaurants.vue';
 import VariousPharmacy from '../components/VariousPharmacy.vue';
@@ -20,7 +20,7 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: HomePage 
+            component: HomeLuminaea 
         },
         {
             path: '/order-prefered',

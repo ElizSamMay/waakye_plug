@@ -1,4 +1,19 @@
 
+
+<script setup>
+    import {useRouter} from 'vue-router'
+   
+
+    const router = useRouter()
+
+
+    function handleStartButtonTapped(){
+        router.push('/order-prefered')
+    }
+
+</script>
+
+
 <template>
     <div id="parent">
 
@@ -17,14 +32,14 @@
             reach. Simplify customer management and engage with customers.
         </p>
         <div class="buttons">
-            <button class="button1">
+            <button @click="handleStartButtonTapped" class="button1" >
                 Get Started
-                <img class="minimalbutt" src="pic/Right Arrow Long.png">
+                <img class="minimalbutt" src="@/assets/lumpic/rightarrowlong.png">
             </button>
 
             <button class="button2">
                 See How LumiBiz Works
-                <img class="minimalbutt0" src="pic/Play Rounded.png">
+                <img class="minimalbutt0"  src="@/assets/lumpic/Play Rounded.png">
             </button>
         </div>
 
@@ -32,15 +47,15 @@
 
     <div class="second-container">
         <div class="first-picture0">
-            <img class src="pic/Group 2.png">
+            <img class  src="@/assets/lumpic/Group 2.png">
         </div>
 
         <div class="first-picture">
-            <img class src="pic/normpic1.png">
+            <img class  src="@/assets/lumpic/normpic1.png">
         </div>
 
         <div class="first-picture">
-            <img class src="pic/normpic1.png">
+            <img class src="@/assets/lumpic/normpic1.png">
         </div>
 
     </div>
@@ -64,7 +79,7 @@
     </div>
     <div class="subaboutlumin">
         <div class="baby-container">
-            <img src="pic/Manage.png">
+            <img src="@/assets/lumpic/Manage.png">
 
             <p class="second-baby-container">
                 Solution to Business Management
@@ -76,7 +91,7 @@
 
         </div>
         <div class="baby-container">
-            <img src="pic/Group.png">
+            <img src="@/assets/lumpic/Group.png">
 
             <p class="second-baby-container">
                 Platform for B2C engagement
@@ -87,7 +102,7 @@
             </p>
         </div>
         <div class="baby-container">
-            <img src="pic/People Connect0.png">
+            <img src="@/assets/lumpic/People Connect0.png">
 
             <p class="second-baby-container">
                 Parent-School Engagement Solution
@@ -118,7 +133,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Bar Chart.png">
+                    <img class="resize" src="@/assets/lumpic/Bar Chart.png">
                 </div>
 
                 <div class="fixtext">
@@ -139,7 +154,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Chart.png">
+                    <img class="resize" src="@/assets/lumpic/Chart.png">
                 </div>
 
                 <div class="fixtext">
@@ -157,7 +172,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Mark Attendance.png">
+                    <img class="resize" src="@/assets/lumpic/Mark Attendance.png">
                 </div>
 
                 <div class="fixtext">
@@ -179,11 +194,11 @@
 
         <div class="consubthird">
 
-            <img src="pic/iMac Pro Front View Mockup.png">
+            <img src="@/assets/lumpic/iMac Pro Front View Mockup.png">
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/People Connect.png">
+                    <img class="resize" src="@/assets/lumpic/People Connect.png">
                 </div>
 
                 <div class="fixtext">
@@ -220,12 +235,12 @@
         <div class="fouthconsubthird">
 
 
-            <img class="rexsize" src="pic/Rectangle 12.png">
+            <img class="rexsize" src="@/assets/lumpic/Rectangle 12.png">
 
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/People.png">
+                    <img class="resize" src="@/assets/lumpic/People.png">
                 </div>
 
                 <div class="fixtext">
@@ -249,7 +264,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Parent.png">
+                    <img class="resize" src="@/assets/lumpic/Parent.png">
                 </div>
 
                 <div class="fixtext">
@@ -269,7 +284,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Info Squidly.png">
+                    <img class="resize" src="@/assets/lumpic/Info Squidly.png">
                 </div>
 
                 <div class="fixtext">
@@ -287,7 +302,7 @@
 
             <div class="arrangement-container">
                 <div class="picsize1">
-                    <img class="resize" src="pic/Vector.png">
+                    <img class="resize" src="@/assets/lumpic/Vector.png">
                 </div>
 
                 <div class="fixtext">
