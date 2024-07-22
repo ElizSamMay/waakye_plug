@@ -403,6 +403,7 @@
             background-color: #0055B2;
             color: white;
             padding: 10px;
+            cursor: pointer;
 
 
 
@@ -417,6 +418,7 @@
             background-color: white;
             color: #0055B2;
             padding: 10px;
+            cursor: pointer;
 
 
 
