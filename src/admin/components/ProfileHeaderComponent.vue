@@ -1,5 +1,10 @@
 
-<script>
+<script setup>
+   import { AuthStorageHelper } from '../storage/auth_storage_helper';
+   import {ref} from 'vue'
+   const userDetails = AuthStorageHelper.getUserDetails()
+   const userName = ref(userDetails[AuthStorageHelper.managersFullName])
+   
 
 </script>
 
@@ -7,7 +12,7 @@
      <div class="main-object-container">
 
         <div class="name-and-position">
-            <div class="name">Papa Addo</div>
+            <div class="name">{{ userName }}</div>
             <div class="position">Manager</div>
         </div>
 

@@ -9,7 +9,10 @@ import ProfileHeaderComponent from "@/admin/components/ProfileHeaderComponent.vu
 import CheckBoxComponent from '@/admin/components/CheckBoxComponent.vue'
 import Menu from 'primevue/menu';
 import MenuItem from "@/components/MenuComponent.vue"
+import { useRouter } from "vue-router";
 // import Button from 'primevue/button';
+
+const router = useRouter()
 
 const showAddDish = ref(false);
 const showQr = ref(false);
@@ -37,6 +40,10 @@ function openQr() {
   showQr.value = true;
 }
 
+function pushToCatalogue() {
+  router.push('/admin-catalogue')
+}
+
 const dashboardDisplayItems = ref([
   {
     iconUrl: "https://remacccount.s3.amazonaws.com/static/stats_icon.svg",
@@ -53,7 +60,7 @@ const dashboardDisplayItems = ref([
     value: "2000",
     description: "Today's Revenue",
   },
-  
+
 ]);
 
 const dishesAdded = ref([
@@ -70,24 +77,24 @@ const dishesAdded = ref([
 
 const menu = ref();
 const items = ref([
-    {
-        label: 'Options',
-        items: [
-            {
-                label: 'Refresh',
-                icon: 'pi pi-refresh'
-            },
-            {
-                label: 'Export',
-                icon: 'pi pi-upload'
-            }
-        ]
-    }
+  {
+    label: 'Options',
+    items: [
+      {
+        label: 'Refresh',
+        icon: 'pi pi-refresh'
+      },
+      {
+        label: 'Export',
+        icon: 'pi pi-upload'
+      }
+    ]
+  }
 ]);
 
 const toggle = (event) => {
-    console.log(event)
-    // menu.value.toggle(event);
+  console.log(event)
+  // menu.value.toggle(event);
 };
 
 </script>
@@ -104,14 +111,15 @@ const toggle = (event) => {
         <ProfileHeaderComponent />
       </div>
 
+      <div class="home-action-button-container">
+        <button @click="pushToCatalogue">View Catalogue</button>
+        <button>Generate Web QrCode</button>
+      </div>
+
       <div class="dashboard-values">
         <div class="statistic-items">
           <div v-for="item in dashboardDisplayItems">
-            <DashboardDataComponent
-              :iconUrl="item.iconUrl"
-              :value="item.value"
-              :description="item.description"
-            />
+            <DashboardDataComponent :iconUrl="item.iconUrl" :value="item.value" :description="item.description" />
           </div>
         </div>
       </div>
@@ -136,17 +144,17 @@ const toggle = (event) => {
         <div class="food-items">
 
           <div class="header-section">
-            
+
             <div class="title-div">
-                Order Reports
+              Order Reports
             </div>
 
             <div class="actions">
-                <div class="action-item action-1">Updated 1 day ago</div>
-                <div class="action-item action-2"><img src="../assets/sort.svg" alt=""> Sort</div>
-                <div class="action-item action-2"><img src="../assets/filter.svg" alt=""> Filter</div>
+              <div class="action-item action-1">Updated 1 day ago</div>
+              <div class="action-item action-2"><img src="../assets/sort.svg" alt=""> Sort</div>
+              <div class="action-item action-2"><img src="../assets/filter.svg" alt=""> Filter</div>
             </div>
-            
+
 
           </div>
 
@@ -156,178 +164,49 @@ const toggle = (event) => {
               <thead>
                 <tr class="header-tr">
                   <div class="left-section-holder">
-                    <th><CheckBoxComponent /></th>
+                    <th>
+                      <CheckBoxComponent />
+                    </th>
                     <th># Order Number</th>
                     <th># Customer's phone</th>
-                  </div>  
-                  
+                  </div>
+
                   <div class="right-section-holder">
-                    <th>Item name</th>
-                    <th>Amount</th>
                     <th>Order Status</th>
                     <th>Actions</th>
                   </div>
-                  
+
                 </tr>
               </thead>
 
               <tbody>
-               <tr class="header-tr body-tr">
+                <tr class="header-tr body-tr">
 
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
+                  <div class="left-section-holder-body">
+                    <td>
+                      <CheckBoxComponent />
+                    </td>
                     <td>AS-14321</td>
                     <td>0556236739</td>
-                  </div>  
-                  
+                  </div>
+
                   <div class="right-section-holder-body">
                     <td>Tattoo Lash</td>
                     <td>GHS 350</td>
-                    <td><div class="status-component pending">Pending</div></td>
-                    <td> <div class="card flex justify-center">
-                        <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem>
-    </div></td>
+                    <td>
+                      <div class="status-component pending">Pending</div>
+                    </td>
+                    <td>
+                      <div class="card flex justify-center">
+                        <MenuItem :approvefunc="approvefunc" :disaapprovefunc="disapprovefunc"
+                          :verifiedfunc="verifiedfunc" :unverifiedfunc="unverifiedfunc" :fetchAllfunc="fetchAllfunc">
+                        <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
+                        </MenuItem>
+                      </div>
+                    </td>
                   </div>
 
-               </tr>
-
-               <!-- delete when data comes from backend -->
-               <tr class="header-tr body-tr">
-
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
-                    <td>AS-14321</td>
-                    <td>0556236739</td>
-                  </div>  
-                  
-                  <div class="right-section-holder-body">
-                    <td>Tattoo Lash</td>
-                    <td>GHS 350</td>
-                    <td><div class="status-component active">Active</div></td>
-                    <td> <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem></td>
-                  </div>
-
-               </tr>
-
-
-               <tr class="header-tr body-tr">
-
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
-                    <td>AS-14321</td>
-                    <td>0556236739</td>
-                  </div>  
-                  
-                  <div class="right-section-holder-body">
-                    <td>Tattoo Lash</td>
-                    <td>GHS 350</td>
-                    <td><div class="status-component cancelled">Cancelled</div></td>
-                    <td> <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem></td>
-                  </div>
-
-               </tr>
-
-
-               <tr class="header-tr body-tr">
-
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
-                    <td>AS-14321</td>
-                    <td>0556236739</td>
-                  </div>  
-                  
-                  <div class="right-section-holder-body">
-                    <td>Tattoo Lash</td>
-                    <td>GHS 350</td>
-                    <td> <div class="status-component pending">Pending</div></td>
-                    <td> <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem></td>
-                  </div>
-
-               </tr>
-
-
-               <tr class="header-tr body-tr">
-
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
-                    <td>AS-14321</td>
-                    <td>0556236739</td>
-                  </div>  
-                  
-                  <div class="right-section-holder-body">
-                    <td>Tattoo Lash</td>
-                    <td>GHS 350</td>
-                    <td><div class="status-component pending">Pending</div></td>
-                    <td> <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem></td>
-                  </div>
-
-               </tr>
-
-
-               <tr class="header-tr body-tr">
-
-                <div class="left-section-holder-body">
-                    <td><CheckBoxComponent /></td>
-                    <td>AS-14321</td>
-                    <td>0556236739</td>
-                  </div>  
-                  
-                  <div class="right-section-holder-body">
-                    <td>Tattoo Lash</td>
-                    <td>GHS 350</td>
-                    <td><div class="status-component pending">Pending</div></td>
-                    <td> <MenuItem
-            :approvefunc="approvefunc"
-            :disaapprovefunc="disapprovefunc"
-            :verifiedfunc="verifiedfunc"
-            :unverifiedfunc="unverifiedfunc"
-            :fetchAllfunc="fetchAllfunc"
-        >
-         <img src="../assets/more - vertical.svg" alt="" class="settings-imagee">
-        </MenuItem></td>
-                  </div>
-
-               </tr>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -335,11 +214,7 @@ const toggle = (event) => {
       </div>
     </div>
 
-    <AddDish
-      v-if="showAddDish"
-      @close-modal="closeModal"
-      @add-dish="(args) => addDish(args)"
-    />
+    <AddDish v-if="showAddDish" @close-modal="closeModal" @add-dish="(args) => addDish(args)" />
   </div>
 </template>
 
@@ -353,7 +228,7 @@ const toggle = (event) => {
 }
 
 .first-column {
-  background-color:black;
+  background-color: black;
 }
 
 .hero-section {
@@ -411,17 +286,18 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-th{
+
+th {
   text-align: left;
   padding: 16px;
   /* background-color: green; */
 }
 
-td{
-    padding: 24px 14px;
-    text-align: center;
-    font-size: 14px;
-    color: #252733
+td {
+  padding: 24px 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #252733
     /* background-color: red; */
 }
 
@@ -441,7 +317,8 @@ tr:last-child td:last-child {
 }
 
 table {
-  border-radius: 10px; /* Adjust this value as needed */
+  border-radius: 10px;
+  /* Adjust this value as needed */
   overflow: hidden;
 }
 </style>
@@ -465,102 +342,118 @@ button:hover {
   cursor: pointer;
 }
 
-.table-div-section{
-    border: 1px solid #DFE0EB;
-    border-radius: 16px;
-    margin-top: 64px;
-    padding-top: 32px;
+.table-div-section {
+  border: 1px solid #DFE0EB;
+  border-radius: 16px;
+  margin-top: 64px;
+  padding-top: 32px;
 }
 
-.title-div{
-    font-weight: 600;
-    font-size: 20px;
-    color: #252733;
+.title-div {
+  font-weight: 600;
+  font-size: 20px;
+  color: #252733;
 }
 
-.header-section{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 32px 32px 32px;
-
-}
-
-.actions{
-    display: flex;
-    gap: 32px;
-}
-
-.action-item{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.action-1{
-    color: #C5C7CD;
-    font-size: 12px;
-}
-
-.action-2{
-   color:  #4B506D;
-   font-size: 14px;
-}
-
-.header-tr{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.body-tr{
-    border-bottom: 1px solid #DFE0EB;
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px 32px 32px;
 
 }
 
-.body-tr:hover{
-   background-color: rgba(253, 177, 73, 0.15);
+.actions {
+  display: flex;
+  gap: 32px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.action-1 {
+  color: #C5C7CD;
+  font-size: 12px;
+}
+
+.action-2 {
+  color: #4B506D;
+  font-size: 14px;
+}
+
+.header-tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body-tr {
+  border-bottom: 1px solid #DFE0EB;
+
+}
+
+.body-tr:hover {
+  background-color: rgba(253, 177, 73, 0.15);
 }
 
 
-.left-section-holder{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.left-section-holder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.left-section-holder-body{
-    display: flex;
-    align-items: center;
-    gap: 36px;
+.left-section-holder-body {
+  display: flex;
+  align-items: center;
+  gap: 36px;
 }
 
-.right-section-holder-body{
-    display: flex;
-    align-items: center;
-    gap: 18px
+.right-section-holder-body {
+  display: flex;
+  align-items: center;
+  gap: 18px
 }
 
-thead{
-    border-bottom: 2px solid #DFE0EB;
+thead {
+  border-bottom: 2px solid #DFE0EB;
 }
 
-.status-component{
-    padding: 6px 6px;
-    border-radius: 24px;
-    color: white;
-    min-width: 80px;
+.status-component {
+  padding: 6px 6px;
+  border-radius: 24px;
+  color: white;
+  min-width: 80px;
 }
 
-.active{
-    background-color: #29CC97;
+.active {
+  background-color: #29CC97;
 }
 
-.pending{
-    background-color: #FEC400;
+.pending {
+  background-color: #FEC400;
 }
 
-.cancelled{
-    background-color: #F12B2C;
+.cancelled {
+  background-color: #F12B2C;
+}
+
+.home-action-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.home-action-button-container button {
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+
 }
 </style>

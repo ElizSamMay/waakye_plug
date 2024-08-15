@@ -30,16 +30,18 @@
 
     .ingredient-select-tile{
         background-color: rgba(72,60,111,0.4);
-        border: 2px solid rgba(72,60,111,1);
+        border: 1px solid rgba(72,60,111,1);
         border-radius: 16px;
         display: flex;
         justify-content: space-between;
         padding: 8px;
         min-width: 100px;
         color: rgba(72,60,111,1);
+        gap: 8px;
     }
 
     .price{
+        font-size: 0.8rem;
         font-weight: bold;
     }
 

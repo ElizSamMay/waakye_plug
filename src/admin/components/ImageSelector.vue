@@ -8,7 +8,12 @@
 <template>
 
     <div class="main-template-holder">
+        <div class="image-container">
+            <img src="../../assets/upload-line.svg" alt="">
+        </div>
 
+        <p>Tap To Upload Image</p>
+        
     </div>
     <div class="description">Upload Dish Image</div>
 
@@ -23,10 +28,21 @@
         width: 200px;
         background-color: white;
         margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .description{
-        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .image-container{
+        width: 70px;
+    }
+
+    .main-template-holder:hover{
+        cursor: pointer;
     }
 </style>
 

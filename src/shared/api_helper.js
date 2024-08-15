@@ -10,7 +10,7 @@ export const RequestMethod = {
     DELETE: 'DELETE'
 }
 
-export const BASEURL = "https://waakye-plug-backend.onrender.com";
+export const BASEURL = "https://api.lumibiz.live/";
 // export const BASEURL = "http://192.168.8.197:3294/";
 
 

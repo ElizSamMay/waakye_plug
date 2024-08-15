@@ -2,9 +2,22 @@
 <script setup>
 import OptionSelectorComponent from '@/admin/components/OptionSelectorComponent.vue';
 import {useRouter} from 'vue-router'
+import { onMounted } from 'vue';
+import { AuthStorageHelper } from './storage/auth_storage_helper';
+
+
+
 
 const router = useRouter()
 
+onMounted(()=>{
+    const userDetails = AuthStorageHelper.getUserDetails()
+    const token = userDetails[AuthStorageHelper.token]
+    const isLoggedIn = token
+    if (isLoggedIn){
+        router.push('/dashboard')
+    }
+})
 function registerRestaurant(){
     console.log("Mango")
    router.push('/admin')
@@ -13,6 +26,7 @@ function registerRestaurant(){
 function registerProduct(){
    router.push('/')
 }
+
 </script>
 
 

@@ -1,0 +1,40 @@
+:root {
+    --main-background-color: rgb(248, 248, 248);
+    --main-orange-color: rgb(255, 140, 0);
+    --main-text-ash-color: #A0AEC0;
+    --gray-scale-100: #CBD5E0;
+    --text-gray-300: #687588;
+    --app-gap-8: 8px;
+    --app-gap-16: 16px;
+    --app-gap-32: 32px;
+    --app-gap-64: 64px;
+    --app-padding-64px: 64px;
+    --app-padding-16px: 16px;
+    --app-padding-32px: 32px;
+    --app-width-500: 500px;
+    --font-size-32: 32px;
+    --font-size-16: 16px;
+    --font-size-12: 12px;
+    --font-size-8: 8px;
+    --font-size-14: 14px;
+    --font-size-20: 20px;
+    --app-deep-blue: #111827;
+    --corner-radius-10: 10px;
+    --neutral-gray-border: #9E9E9E;
+    --error-color: #EB5842;
+    --main-orange-disabled-color: rgba(255, 140, 0, 0.5);
+    --main-dark-blue-color: black;
+  }
+  
+  body {
+    background-color: var(--main-background-color);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+  }
+  

@@ -31,22 +31,20 @@ import {defineModel, defineProps} from 'vue'
 
 <style scoped>
 #main{
-   
+   width: 100%;
 }
 
 .input-value-title{
-    font-weight: 400;
     font-size: 0.9rem;
     color: rgba(256, 256, 256, 0.7);
     padding-bottom: 8px;
 }
 
 .input-value-title-light{
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: rgb(41, 41, 70);
     padding-bottom: 8px;
-    font-weight: bold;
+  
 }
 
 .input-holder{
@@ -57,10 +55,9 @@ input{
     height: 90%;
     width: 100%;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    border:  none;
-    padding: 8px;
+    border-radius: 4px;
+    border:  1px solid rgba(0, 0, 0, 0.2);
+    padding: 16px 8px;
     color: white;
 }
 

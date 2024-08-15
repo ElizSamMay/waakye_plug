@@ -37,10 +37,9 @@
     height: 90%;
     width: 100%;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    border:  none;
-    padding: 8px;
+    border:  1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
     color: rgb(41, 41, 70);
 }
 
@@ -50,8 +49,7 @@
 }
 
 .currency{
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 0.8rem;
 
 }
 </style>

@@ -1,6 +1,6 @@
 
-
-import {createMemoryHistory, createRouter} from 'vue-router'
+/* eslint-disable */
+import {createWebHistory, createRouter} from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import AddDishes from '../components/AddDishes.vue';
 import SubtotalSection from '../components/SubtotalSection.vue';
@@ -13,12 +13,14 @@ import ConfirmUserDetails from '@/components/ConfirmUserDetails.vue'
 import AdminSignUp from '@/admin/AdminSignUp.vue';
 import AdminDashboard from '@/admin/AdminDashboard.vue';
 import AdminLandingPage from '@/admin/AdminLandingPage.vue';
+import CataloguePage from '@/admin/CataloguePage.vue'
+import { AuthStorageHelper } from '@/admin/storage/auth_storage_helper';
 
 
 
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
@@ -81,11 +83,23 @@ const router = createRouter({
             name: 'admin-landing-page',
             component: AdminLandingPage
         },
-
-        
-
+        {
+            path: '/admin-catalogue',
+            name: 'admin-catalogue',
+            component: CataloguePage
+        }
 
     ]
 })
 
+router.beforeEach((to, from, next)=>{
+    const authDetails = AuthStorageHelper.getUserDetails()
+    const isLoggedIn = authDetails;
+    if (isLoggedIn){
+            next()
+        return;
+    }else{
+        next()
+    }
+})
 export default router;
