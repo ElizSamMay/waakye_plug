@@ -44,10 +44,10 @@ function registerProduct(){
         </div>
 
         <div class="right-section">
-            <div class="top-section">
+            <!-- <div class="top-section">
                 <div class="empty"></div>
                 <div class="text-holder"><span class="gray-text">Already have an account ?</span><span> Sign In</span></div>
-            </div>
+            </div> -->
 
             <div class="middle-section">
                     <div class="middle-section-child">
