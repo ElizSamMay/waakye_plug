@@ -75,6 +75,13 @@ function proceedToLogin(){
 function otpCompleted(){
    router.push('/dashboard')
 }
+
+function handleSignInTapped(){
+      currentScreen.value = Constants.signUpScreenConstant;
+}
+function handleSignUpTapped(){
+   currentScreen.value = Constants.signInScreenConstant;
+}
 </script>
 
 <template>
@@ -93,6 +100,17 @@ function otpCompleted(){
     </div>
 
     <div class="right-section">
+
+      <div class="top-section" v-if="currentScreen === Constants.signInScreenConstant">
+                <div class="empty"></div>
+                <div class="text-holder" @click="handleSignInTapped"><span class="gray-text">Don't have an account ?</span><span class="bold-text"> Sign up</span></div>
+      </div>
+
+      <div class="top-section" v-if="currentScreen === Constants.signUpScreenConstant">
+                <div class="empty"></div>
+                <div class="text-holder" @click="handleSignUpTapped"><span class="gray-text">Already have an account ?</span><span class="bold-text"> Sign In</span></div>
+      </div>
+
       <div v-if="currentScreen === Constants.signUpScreenConstant" class="template-container">
         <p class="title-large">Create Your Restaurant</p>
 
@@ -163,6 +181,13 @@ function otpCompleted(){
   align-items: center;
   justify-content: center;
   background-color: white;
+  position: relative;
+}
+
+.top-section{
+    position: absolute;
+    top: 32px;
+    right: 32px;
 }
 
 .left-section {
@@ -218,6 +243,14 @@ function otpCompleted(){
   background-color: red;
 }
 
+.bold-text{
+   font-weight: bold;
+}
+
+.text-holder:hover{
+    cursor: pointer;
+}
+
 .image-holder img {}
 
 @media screen and (max-width: 950px) {
@@ -244,8 +277,6 @@ function otpCompleted(){
   .sub-title {
     margin-top: 8px;
   }
-
-
 
 }
 </style>
