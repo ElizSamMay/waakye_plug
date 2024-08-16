@@ -90,12 +90,12 @@ async function makeOtpRequest(otp){
     <div class="reset-password-template-container">
 
         <div class="rem-logo-container">
-            <!-- <img src="../../../assets/logo_without_shadow.svg" alt=""> -->
+            <img src="../../assets/otp.svg" alt="">
         </div>
 
         <div class="title-description-container">
             <p class="title-header">OTP Verification</p>
-            <p class="regular-blue-text">We have sent a verification code to email address <span class="email-bold">{{ email }}</span> <span class="orange-text">Wrong Email ?</span></p>
+            <p class="regular-blue-text">We have sent a verification code to email address <span class="email-bold">{{ email }}</span> <span class="orange-text" @click="$emit('wrong-email-tapped')">Wrong Email ?</span></p>
         </div>
 
         <div class="otp-container">
@@ -116,7 +116,7 @@ async function makeOtpRequest(otp){
 
 .orange-text{
         color: black;
-        font-weight: 300;
+        
     }
 
 .email-bold{
@@ -166,6 +166,14 @@ input:focus{
     flex-direction: column;
     gap: 8px;
 }
+
+.orange-text{
+    color: orange;
+}
+
+.orange-text:hover{
+    cursor: pointer;
+}
 </style>
 
 <style>
@@ -180,6 +188,5 @@ input:focus{
         font-size: 18px;
         color: #111827;
         text-align: center;
-        font-weight: 300;
     }
 </style>

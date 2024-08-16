@@ -8,14 +8,19 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@headlessui/vue": "^1.7.22",
+    "@lottiefiles/vue-lottie-player": "^1.1.0",
     "axios": "^1.7.3",
     "core-js": "^3.8.3",
+    "lottie-vuejs": "^0.4.0",
     "primevue": "^4.0.0-rc.2",
     "qrcode.vue": "^3.4.1",
+    "save": "^2.9.0",
     "sweetalert2": "^11.10.6",
     "vue": "^3.2.13",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue3-lottie": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

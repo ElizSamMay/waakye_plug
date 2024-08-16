@@ -15,6 +15,7 @@ import AdminDashboard from '@/admin/AdminDashboard.vue';
 import AdminLandingPage from '@/admin/AdminLandingPage.vue';
 import CataloguePage from '@/admin/CataloguePage.vue'
 import { AuthStorageHelper } from '@/admin/storage/auth_storage_helper';
+import ForgotPasswordScreen from '@/admin/auth/ForgotPasswordScreen.vue';
 
 
 
@@ -87,6 +88,11 @@ const router = createRouter({
             path: '/admin-catalogue',
             name: 'admin-catalogue',
             component: CataloguePage
+        },
+        {
+            path: '/admin-forgot-password',
+            name: 'forgot-password',
+            component: ForgotPasswordScreen
         }
 
     ]

@@ -33,16 +33,28 @@ import {defineModel, defineProps} from 'vue'
    
 }
 
+
+
+.input-holder{
+    height: 45px;
+}
+
+
+
+.validate{
+    color: red;
+}
+
+
+</style>
+
+<style>
 .input-value-title{
     font-weight: 400;
     font-size: 0.9rem;
     color: rgba(256, 256, 256, 0.7);
     padding-bottom: 8px;
     color: #696F79
-}
-
-.input-holder{
-    height: 45px;
 }
 
 input{
@@ -55,10 +67,4 @@ input{
 
     
 }
-
-.validate{
-    color: red;
-}
-
-
 </style>
