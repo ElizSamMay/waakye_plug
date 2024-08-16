@@ -39,4 +39,8 @@ export class AuthStorageHelper{
          }
     }
 
+    static clearStorage(){
+        localStorage.clear();
+    }
+
 }
