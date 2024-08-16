@@ -2,8 +2,24 @@
 <script setup>
    import { AuthStorageHelper } from '../storage/auth_storage_helper';
    import {ref} from 'vue'
+   import {fireWarningPrompt} from '@/shared/alert_action.js'
+   import {useRouter} from 'vue-router'
    const userDetails = AuthStorageHelper.getUserDetails()
    const userName = ref(userDetails[AuthStorageHelper.managersFullName])
+   const router = useRouter()
+
+
+
+   function fireLogout(){
+         fireWarningPrompt('Are you sure you want to logout ?', 'Yes, Logout', 'No, Cancel', logout)
+   }
+
+
+   function logout(){
+         AuthStorageHelper.clearStorage()
+         router.push('/')
+   }
+
    
 
 </script>
@@ -27,8 +43,8 @@
 
          <div class="line"></div>
 
-         <div><img src="../../assets/notifications.svg" alt=""></div>
-         <div><img src="../../assets/logout.svg" alt=""></div>
+         <div class="hover-button"><img src="../../assets/notifications.svg" alt=""></div>
+         <div class="hover-button" @click="fireLogout"><img src="../../assets/logout.svg" alt=""></div>
      </div>
 
 </template>
@@ -71,6 +87,10 @@
       height: 70px;
       background-color: #EFF4F6;
       width: 1px;
+   }
+
+   .hover-button:hover{
+         cursor: pointer;
    }
 
 

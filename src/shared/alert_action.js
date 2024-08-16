@@ -36,6 +36,25 @@ export function fireDeletePrompt(){
         showCancelButton: true,
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'No, cancel!',
-        reverseButtons: true
+        reverseButtons: true,
+        confirmButtonColor: 'rgb(41, 41, 70)'
+    });
+}
+
+
+export function fireWarningPrompt(message,yes, no, action){
+   Swal.fire({
+        title: 'Are you sure?',
+        text: message,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: yes,
+        cancelButtonText: no,
+        reverseButtons: true,
+        confirmButtonColor: 'rgb(41, 41, 70)'
+    }).then((value)=>{
+        if (value.isConfirmed){
+            action.call()
+        }
     });
 }
