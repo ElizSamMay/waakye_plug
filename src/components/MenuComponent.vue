@@ -15,23 +15,23 @@
           >
             <div class="px-1 py-1">
               <MenuItem >
-                <button class="button-style" @click="props.fetchAllfunc">View</button>
+                <button class="button-style0" @click="props.fetchAllfunc">View</button>
               </MenuItem>
             
               <div>
                 <MenuItem >
-               <button class="button-style" @click="props.disaapprovefunc">Accept</button>
+               <button class="button-style1" @click="props.disaapprovefunc">Accept</button>
               </MenuItem>
               </div>
               
             </div>
   
             <MenuItem >
-              <button class="button-style" @click="verifiedfunc">Close</button>
+              <button class="button-style2" @click="verifiedfunc">Close</button>
             </MenuItem>
   
             <MenuItem >
-              <button class="button-style" @click="unverifiedfunc">Cancel</button>
+              <button class="button-style3" @click="unverifiedfunc">Cancel</button>
             </MenuItem>
   
           </MenuItems>
@@ -76,13 +76,43 @@
     border: none;
   }
   
-  .button-style{
+  .button-style0{
     background: none;
     color: gray;
   }
   
-  .button-style:hover{
+  .button-style0:hover{
     background: gray;
+    color: white;
+    border-radius: 8px;
+  }
+  .button-style1{
+    background: none;
+    color: gray;
+  }
+  
+  .button-style1:hover{
+    background: green;
+    color: white;
+    border-radius: 8px;
+  } 
+  .button-style2{
+    background: none;
+    color: gray;
+  }
+  
+  .button-style2:hover{
+    background: rgb(246, 129, 129);
+    color: white;
+    border-radius: 8px;
+  } 
+  .button-style3{
+    background: none;
+    color: gray;
+  }
+  
+  .button-style3:hover{
+    background: red;
     color: white;
     border-radius: 8px;
   }
