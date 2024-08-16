@@ -112,8 +112,15 @@ const toggle = (event) => {
       </div>
 
       <div class="home-action-button-container">
+
         <button @click="pushToCatalogue">View Catalogue</button>
-        <button>Generate Web QrCode</button>
+       
+        <div class="gap-16">
+          <button>Generate Web QrCode</button>
+          <button>Create Flyer</button>
+        </div>
+       
+
       </div>
 
       <div class="dashboard-values">
@@ -455,5 +462,10 @@ thead {
   padding: 8px 16px;
   border-radius: 8px;
 
+}
+
+.gap-16{
+   display: flex;
+   gap: 16px;
 }
 </style>
