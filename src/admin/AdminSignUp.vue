@@ -246,6 +246,11 @@ function handleSignUpTapped(){
 .bold-text{
    font-weight: bold;
 }
+.bold-text:hover{
+padding: 3px;
+transition: 0.5s;
+text-decoration: underline;
+}
 
 .text-holder:hover{
     cursor: pointer;

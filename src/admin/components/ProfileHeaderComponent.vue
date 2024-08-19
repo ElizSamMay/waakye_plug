@@ -91,6 +91,8 @@
 
    .hover-button:hover{
          cursor: pointer;
+         padding: 10px;
+         transition: 0.5s;
    }
 
 
