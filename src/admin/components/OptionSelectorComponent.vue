@@ -33,8 +33,11 @@ import {defineProps} from 'vue';
     padding: 16px;
 }
 
-.paddined :hover{
+.paddined:hover{
     cursor: pointer;
+    background-color: #f8d5a3;
+    /* color:white */
+    transition: 0.3s;
 }
   .main-container-holder{
     padding: 24px;
@@ -43,8 +46,12 @@ import {defineProps} from 'vue';
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     align-items: center;
+    
+   
 
   }
+  
+  
 
   .image-and-text{
     display: flex;
