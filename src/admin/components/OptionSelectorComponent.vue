@@ -33,7 +33,7 @@ import {defineProps} from 'vue';
     padding: 16px;
 }
 
-.paddined :hover{
+.paddined:hover{
     cursor: pointer;
     background-color: #f8d5a3;
     /* color:white */
