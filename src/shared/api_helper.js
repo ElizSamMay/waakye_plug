@@ -12,6 +12,7 @@ export const RequestMethod = {
 
 export const BASEURL = "https://api.lumibiz.live/";
 // export const BASEURL = "http://192.168.8.197:3294/";
+// export const BASEURL = 'https://662c-154-160-10-132.ngrok-free.app/'
 
 
 
