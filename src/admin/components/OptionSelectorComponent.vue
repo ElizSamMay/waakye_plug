@@ -35,9 +35,7 @@ import {defineProps} from 'vue';
 
 .paddined:hover{
     cursor: pointer;
-    background-color: #f8d5a3;
-    /* color:white */
-    transition: 0.3s;
+    
 }
   .main-container-holder{
     padding: 24px;
@@ -49,6 +47,10 @@ import {defineProps} from 'vue';
     
    
 
+  }
+  .main-container-holder:hover{
+    background-color: #f8d5a3;
+    transition: 0.5s;
   }
   
   
