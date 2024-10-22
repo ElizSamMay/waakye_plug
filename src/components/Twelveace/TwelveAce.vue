@@ -108,7 +108,7 @@ function removeNav() {
                         }">
                         <swiper-slide class="slide">
                             <video autoplay muted loop id="myVideo">
-                                <!-- <source src="../../assets/images/vetvid.mp4" type="video/mp4"> -->
+                                <source src="../../assets/images/vetvid.mp4" type="video/mp4">
                             </video>
                             <div class="sample-text">
 
