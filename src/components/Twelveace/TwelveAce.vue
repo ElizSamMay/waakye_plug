@@ -39,14 +39,15 @@ function handlehamergerButtonTapped() {
         hamburgerMenu.classList.toggle('is-active');
         mobileMenu.classList.toggle('is-active');
     });
-
-
-
 }
 
 
 function removeNav() {
     hideNav.value = true
+}
+
+function refreshPage() {
+
 }
 </script>
 
@@ -58,12 +59,12 @@ function removeNav() {
 
     <div class="main-component">
 
-        <section>
+        <section class="0ne">
             <div class="main-parent-container">
                 <button class="hamburger" @click="handlehamergerButtonTapped">
                     <div class="bar"></div>
                 </button>
-                <div>
+                <div @click="refreshPage">
                     <img class="gif" src="../../assets/images/group12.png">
                 </div>
 
@@ -73,8 +74,21 @@ function removeNav() {
 
 
                     <a class="yyy" href="#mainpage" @click="removeNav">Home</a>
-                    <a href="">Company</a>
-                    <a href="">About</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Business</button>
+                        <div class="dropdown-options">
+                            <a href="#">The Next Habitat</a>
+                            <a href="#">9th Restaurant IX</a>
+                            <a href="#">Pace Recreation Center</a>
+                            <a href="#">Global Point Delivery Service</a>
+                            <a href="#">FoodNexus Pickup Point System</a>
+                            <a href="#">Hive Real Estate</a>
+                            <a href="#">Gas Filling Station</a>
+
+                        </div>
+                    </div>
+
+                    <a href="">About Us</a>
                     <a href="#first">Media</a>
                     <a href="#third">Visit Us</a>
                     <a href="https://wa.me/+233240056880">Talk to us</a>
@@ -92,7 +106,7 @@ function removeNav() {
         </section>
 
 
-        <section>
+        <section class="two">
             <div class="main-page" @click="handlehamergerButtonTapped">
 
 
@@ -180,12 +194,180 @@ function removeNav() {
 
 
                 </section>
+            </div>
+        </section>
 
+
+        <section class="three">
+            <div class="third-containter">
+
+                <div class="edit-subfs">
+                    SUBSIDIARIES FOCUS
+                </div>
+
+                <div class="support-container">
+                    <div class="tnh-zone">
+                        <div class="tnh-images">
+                            <img class="tnh-images-resize"
+                                src="https://cdn.britannica.com/56/155656-050-EF76EB04/chickens-poultry-farm.jpg">
+                        </div>
+                        <div class="tnh-text">
+                            <p class="nice-text">
+                                Read More
+                            </p>
+
+                            <p class="tnh-header-text">
+                                Best In Animal Care, Foods and Manufacturing
+                            </p>
+
+                            <p class="tnh-header-subtext">
+                                The Next Habitat is everything Veterinary, that keeps both Pet and Food animals in
+                                shape.
+                                There are a series of work sites that come in common to make a whole, we have the Animal
+                                Farms [Poultry Farm,Piggery farm, Fish culture], Modernised Abattoir, a Processing and
+                                Manufacturing facility Veterinary Hospital, Pet Boarding/Hotel/PlayGround,Pet Shops and
+                                School.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ixh-zone">
+                        <div class="ixh-images">
+                            <img class="ixh-images-resize"
+                                src="https://traveltimeafrica.com/ourblog/wp-content/uploads/2021/04/IMG_3314.jpg">
+                        </div>
+
+                        <div class="ixh-text">
+                            <p class="ixh-nice-text">
+                                Read More
+                            </p>
+
+                            <p class="ixh-header-text">
+                                Find Our Fancy Restaurant On the Globle
+                            </p>
+
+                            <p class="ixh-header-subtext">
+                                9th hour Restaurants is a food center where all kinds of dishes can be found there
+                                including Our African foods and the Continental foods.
+                                9th restaurant consists of different types of Restaurants from all around the
+                                world.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
 
+        </section>
 
+        <section class="four">
+            <div class="fourth-containter">
+                <div class="ixh-zone">
+                    <div class="ixh-images">
+                        <img class="ixh-images-resize"
+                            src="https://waterslide.net/wp-content/uploads/2021/11/Darwin-Waterslide-Project-2560x1280-1-1024x512.jpg">
+                    </div>
+
+                    <div class="ixh-text">
+                        <p class="ixh-nice-text">
+                            Read More
+                        </p>
+
+                        <p class="ixh-header-text">
+                            Where fun meets fitness and community thrives!
+                        </p>
+
+                        <p class="ixh-header-subtext">
+                            Pace Recreation Center is a event center where meetings are held, sports are
+                            organized and Games are played.Social activities, Camping and outdoor activities, Arts and
+                            crafts activities are also engaged.
+
+                        </p>
+
+
+                    </div>
+                </div>
+
+                <div class="ixh-zone">
+                    <div class="ixh-images">
+                        <img class="ixh-images-resize"
+                            src="https://www.conquerornetwork.com/blog/wp-content/uploads/2023/10/delivery-drone-concept-scaled.jpg">
+                    </div>
+
+                    <div class="ixh-text">
+                        <p class="ixh-nice-text">
+                            Read More
+                        </p>
+
+                        <p class="ixh-header-text">
+                            Your order, our priority!
+                        </p>
+
+                        <p class="ixh-header-subtext">
+                            Global Point Delivery Services is to fulfill the requests of Peoples items to be delivered,
+                            which involves the pickup of any item from any location and the delivery of these items with
+                            the use of various modes of transportation(Motor Bikes, Vehicles & Drones) to a location
+                            chosen by the customer.
+                        </p>
+
+
+                    </div>
+                </div>
+
+                <div class="ixh-zone">
+                    <div class="ixh-images">
+                        <img class="ixh-images-resize"
+                            src="https://www.jll.co.uk/images/global/jll-future-vision-real-estate-social-1200x628.jpg">
+                    </div>
+
+                    <div class="ixh-text">
+                        <p class="ixh-nice-text">
+                            Read More
+                        </p>
+
+                        <p class="ixh-header-text">
+                            Turn your dreams into addresses!
+                        </p>
+
+                        <p class="ixh-header-subtext">
+                            Hive Estate with land and permanent structures, like a home buildings or improvements
+                            attached to the land.
+                            Investing in real estate includes purchasing a home, rental property, or land.
+                            Unlocks a new opportunity
+
+                        </p>
+
+
+                    </div>
+                </div>
+
+                <div class="ixh-zone">
+                    <div class="ixh-images">
+                        <img class="ixh-images-resize"
+                            src="https://durulsan.com/uploads/15412331067964.png">
+                    </div>
+
+                    <div class="ixh-text">
+                        <p class="ixh-nice-text">
+                            Read More
+                        </p>
+
+                        <p class="ixh-header-text">
+                            Efficient energy, endless possibilities!
+                        </p>
+
+                        <p class="ixh-header-subtext">
+                            Empowering energy solutions for a brighter future.
+                            Where communities, Transform the energy landscape and
+                            Fuel the dreams of a sustainable tomorrow.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
@@ -197,10 +379,11 @@ function removeNav() {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+/* 0ne */
 .main-parent-container {
     display: flex;
     // padding: 10px;
-    position: fixed;
+    position: absolute;
     right: 0;
     left: 0;
     justify-content: space-around;
@@ -212,6 +395,7 @@ function removeNav() {
 .gif {
     width: 150px;
     height: 100%;
+    cursor: pointer;
 }
 
 .second-child {
@@ -230,8 +414,6 @@ function removeNav() {
 
 .main-page {
     // position: relative;
-
-
 }
 
 .hamburger .bar,
@@ -255,9 +437,6 @@ function removeNav() {
     border: 3px solid rgb(253, 216, 253);
     border-radius: 10px;
     display: none;
-
-
-
 }
 
 
@@ -276,16 +455,55 @@ a {
     text-decoration: none;
     color: white;
     align-content: center;
+    font-size: 13px;
+    font-weight: 600;
 
 }
 
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 13px;
+    border: none;
+    font-weight: 600;
+}
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    align-content: center;
+    position: relative;
 
+}
 
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: rgb(232, 237, 223);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.6);
+    width: 250px;
+}
 
+.dropdown:hover .dropdown-options {
+    display: block;
+}
 
+.dropdown-options a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 30px 30px;
+}
 
-/* 1st */
+.dropdown-options a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/*two*/
 
 .firstflif-desktop {
     background-color: rgb(0, 0, 0);
@@ -321,8 +539,8 @@ a {
 
 .text-discription0 {
     font-family: "Arima", system-ui;
-    font-size: 50px;
-    width: 500px;
+    font-size: 70px;
+    width: 600px;
     font-weight: bolder;
     color: rgb(157, 219, 173);
 
@@ -332,9 +550,9 @@ a {
     font-family: "Lato", sans-serif;
     line-height: 40px;
     width: 550px;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
-   
+
 }
 
 .subtext1 {
@@ -365,8 +583,139 @@ a {
 
 .motivation {
     color: rgb(75, 192, 217);
-   
+    font-size: 15px;
     width: 300px;
+}
+
+
+/*three*/
+.third-containter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+
+}
+
+.edit-subfs {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.support-container {
+    display: flex;
+    justify-content: space-between;
+
+    // gap: 60px;
+}
+
+.tnh-zone {
+    display: flex;
+
+}
+
+.tnh-images {}
+
+.tnh-images-resize {
+    width: 570px;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.tnh-text {
+
+    padding: 20px;
+    background-color: black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 400px;
+    width: 450px;
+
+}
+
+.tnh-header-text {
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+
+}
+
+.tnh-header-subtext {
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    line-height: 20px;
+
+}
+
+.ixh-zone {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.ixh-images {
+
+   background-color:rgb(232, 237, 223);
+   border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.ixh-images-resize {
+    width: 310px;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+
+
+}
+
+.ixh-text {
+
+    padding: 5px;
+    width: 310px;
+    height: 215px;
+    background-color: rgb(232, 237, 223);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+
+.ixh-nice-text {
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 75px;
+    cursor: pointer;
+}
+
+.ixh-header-text {
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+
+}
+
+.ixh-header-subtext {
+    font-size: 14px;
+    color: black;
+    padding: 5px;
+    line-height: 20px;
+}
+
+/*four*/
+.fourth-containter {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
 }
 
 
@@ -531,399 +880,9 @@ a {
 
 
 
-    /* 1st */
 
-    .firstflif-desktop {
-        background-color: rgb(0, 0, 0);
-        position: relative;
-        height: 40vh;
-        display: block;
 
 
-    }
-
-
-    .swiper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        color: rgb(252, 187, 245);
-
-    }
-
-    .text-discription {
-        font-size: 12px;
-        position: relative;
-        left: 20px;
-        bottom: 120px;
-        width: 150px;
-
-    }
-
-    .text-discription0 {
-        font-size: 12px;
-        position: relative;
-        left: 20px;
-        bottom: 120px;
-        width: 150px;
-
-    }
-
-    .text-discription1 {
-        font-size: 12px;
-        position: relative;
-        left: 20px;
-        bottom: 100px;
-        width: 150px;
-    }
-
-    .subtext {
-        font-family: "Dancing Script", cursive;
-        font-size: 14px;
-        position: relative;
-        left: 20px;
-        bottom: 50px;
-        width: 150px;
-        color: rgb(255, 200, 0);
-
-    }
-
-    .subtext1 {
-        font-family: "Dancing Script", cursive;
-        font-size: 14px;
-        position: relative;
-        left: 20px;
-        bottom: 100px;
-        width: 150px;
-        color: rgb(255, 200, 0);
-    }
-
-    .swiper-slide img {
-        position: relative;
-        width: 120px;
-        height: 100%;
-        left: 260px;
-        top: 10px;
-
-    }
-
-
-
-
-
-    /* 2nd */
-    .secondflip {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-
-    }
-
-    .displaypicture {
-        border: 5px solid rgb(234, 185, 222);
-        border-radius: 80px;
-        width: 250px;
-        height: auto;
-        // display:none;
-        align-content: center;
-
-
-
-    }
-
-    .displaypicture img {
-        width: 100%;
-        height: 100%;
-        // border-radius: 50%;
-    }
-
-
-    .about-description {
-        padding: 10px;
-    }
-
-    .about-styles {
-        font-size: 30px;
-        text-align: center;
-        font-weight: bold;
-        color: rgb(217, 137, 197);
-    }
-
-    .about-discription {
-        font-size: 16px;
-        color: black;
-        padding: 25px;
-    }
-
-
-
-
-    /* 3rd */
-    .thirdflip-desktop {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-    }
-
-    .thirdflip-left {
-        padding: 20px;
-    }
-
-    .lashextention-description {
-        color: brown;
-        font-size: 30px;
-        font-weight: bold;
-        padding: 10px;
-        text-align: center;
-
-
-    }
-
-    .discription-questions {
-        color: rgb(243, 185, 185);
-        font-size: 20px;
-        font-weight: bold;
-        padding: 10px;
-
-
-
-    }
-
-    .discription-answers {
-        font-size: 16px;
-        padding: 10px;
-
-    }
-
-
-    .thirdflip-right {
-
-        padding: 50px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* 4th */
-
-
-    .fouthflip {
-        display: none;
-    }
-
-    .fouthflip-mobile {
-        display: none;
-
-    }
-
-
-    /* 5th */
-
-
-
-    .fifthflip-desktop {}
-
-    .microbladingzone {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-
-
-
-
-
-
-    /* 6th */
-    .sixthflip-desktop {}
-
-    .piercing-arena {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-    }
-
-
-
-    /* 7th */
-
-
-    .rightarea {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .displaypicture1 {
-        width: 100%;
-        height: auto;
-    }
-
-    .rightarea-text {
-
-        padding: 50px;
-        align-content: center;
-
-    }
-
-    .rightarea-subtext {
-
-        padding: 50px;
-    }
-
-
-
-    /* 8th */
-
-    .zone3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-
-    }
-
-    .displaypicture2 {
-        width: 100%;
-        height: auto;
-
-    }
-
-    /* 9th */
-    .eightlogo {
-        width: 100%;
-        height: auto;
-    }
-
-    .eight-text {
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(243, 185, 185)
-    }
-
-    .eight-subtext {
-        font-family: "Dancing Script", cursive;
-        font-size: 16px;
-        font-weight: bold;
-        color: rgb(255, 200, 0);
-    }
-
-    .solution-text {
-        font-size: 16px;
-        padding: 30px;
-        color: rgb(247, 220, 220)
-    }
-
-    .info-text {
-
-        font-size: 10px;
-        color: rgb(247, 220, 220)
-    }
-
-
-    .contact-details {
-        font-size: 10px;
-        display: flex;
-        padding: 30px;
-        gap: 10px;
-        justify-content: center;
-
-
-
-    }
-
-    .phone {
-        width: 14px;
-
-    }
-
-    .numerals {
-
-        color: white;
-    }
-
-    .social-mediahandles {}
-
-    .follow-us {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-
-    }
-
-    .www {
-
-        width: 60px;
-        height: auto;
-        text-align: center;
-        font-size: 10px;
-    }
-
-    .followpic {
-        width: 80%;
-        height: 80%
-    }
-
-    .followpic1 {
-        background-color: white;
-        border-radius: 5px;
-        width: 80%;
-        height: 80%
-    }
-
-    .location {
-        font-size: 14px;
-        padding: 20px;
-        color: rgb(247, 220, 220);
-    }
-
-    .another-top-content {
-
-        position: inherit;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 16px;
-
-
-    }
-
-
-    .certification {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        // padding: 80px;
-        background-color: aquamarine;
-
-    }
-
-
-    .certifiedlogo {
-
-        width: 50%;
-        height: auto;
-
-
-
-    }
-
-    .men {
-
-        // font-size: 10px;
-    }
 
 
 }
