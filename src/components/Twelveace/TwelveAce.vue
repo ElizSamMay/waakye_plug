@@ -73,17 +73,15 @@ function refreshPage() {
 
 
 
-                    <a class="yyy" href="#mainpage" @click="removeNav">Home</a>
+                    <a class="home-edit" href="#mainpage" @click="removeNav">Home</a>
                     <div class="dropdown">
                         <button class="dropbtn">Business</button>
                         <div class="dropdown-options">
                             <a href="#">The Next Habitat</a>
-                            <a href="#">9th Restaurant IX</a>
-                            <a href="#">Pace Recreation Center</a>
-                            <a href="#">Global Point Delivery Service</a>
-                            <a href="#">FoodNexus Pickup Point System</a>
-                            <a href="#">Hive Real Estate</a>
-                            <a href="#">Gas Filling Station</a>
+                            <a href="#">The Hive Limited</a>
+                            <a href="#">Ninth Mall</a>
+                            <a href="#">Swift Fly Service</a>
+                            <a href="#">Global Point LPG</a>
 
                         </div>
                     </div>
@@ -209,7 +207,7 @@ function refreshPage() {
                     <div class="tnh-zone">
                         <div class="tnh-images">
                             <img class="tnh-images-resize"
-                                src="https://cdn.britannica.com/56/155656-050-EF76EB04/chickens-poultry-farm.jpg">
+                                src="https://t3.ftcdn.net/jpg/08/43/53/34/360_F_843533400_x3gyn2wENP9rSwZo5UfYj3kHgCEWR9UY.jpg">
                         </div>
                         <div class="tnh-text">
                             <p class="nice-text">
@@ -224,9 +222,7 @@ function refreshPage() {
                                 The Next Habitat is everything Veterinary, that keeps both Pet and Food animals in
                                 shape.
                                 There are a series of work sites that come in common to make a whole, we have the Animal
-                                Farms [Poultry Farm,Piggery farm, Fish culture], Modernised Abattoir, a Processing and
-                                Manufacturing facility Veterinary Hospital, Pet Boarding/Hotel/PlayGround,Pet Shops and
-                                School.
+                                Farms
                             </p>
                         </div>
                     </div>
@@ -308,7 +304,7 @@ function refreshPage() {
                         <p class="ixh-header-subtext">
                             Global Point Delivery Services is to fulfill the requests of Peoples items to be delivered,
                             which involves the pickup of any item from any location and the delivery of these items with
-                            the use of various modes of transportation(Motor Bikes, Vehicles & Drones) to a location
+                            the use of various modes of transportation; Motor Bikes, Vehicles & Drones to a location
                             chosen by the customer.
                         </p>
 
@@ -332,11 +328,8 @@ function refreshPage() {
                         </p>
 
                         <p class="ixh-header-subtext">
-                            Hive Estate with land and permanent structures, like a home buildings or improvements
-                            attached to the land.
-                            Investing in real estate includes purchasing a home, rental property, or land.
-                            Unlocks a new opportunity
-
+                            The Hive Ltd consists of Construction Services and Real Estate Development.
+                            We are committed to making your dream home efficient and as easy as possible for you.
                         </p>
 
 
@@ -345,8 +338,7 @@ function refreshPage() {
 
                 <div class="ixh-zone">
                     <div class="ixh-images">
-                        <img class="ixh-images-resize"
-                            src="https://durulsan.com/uploads/15412331067964.png">
+                        <img class="ixh-images-resize" src="https://durulsan.com/uploads/15412331067964.png">
                     </div>
 
                     <div class="ixh-text">
@@ -368,6 +360,55 @@ function refreshPage() {
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="five">
+
+            <div class="fifth-container">
+                <div class="blurr-content-picture">
+                    <div class="first-overview">
+                        <div class="sec-sub-core-exp">
+                            <img class="icon-resize" src="../../assets/images/sector.png" alt="">
+                            <div class="t">
+                                <p>5+ </p>
+                                <p>Sectors</p>
+                            </div>
+                        </div>
+
+                        <div class="sec-sub-core-exp">
+                            <img class="icon-resize" src="../../assets/images/icon1.png" alt="">
+                            <div class="t">
+                                <p>10+ </p>
+                                <p>Subsidiaries</p>
+                            </div>
+                        </div>
+
+                        <div class="sec-sub-core-exp">
+                            <img class="icon-resize" src="../../assets/images/staffs.png" alt="">
+                            <div class="t">
+                                <p>500+ </p>
+                                <p>Core Staff</p>
+                            </div>
+                        </div>
+
+                        <div class="sec-sub-core-exp">
+                            <img class="icon-resize" src="../../assets/images/certificatte.png" alt="">
+                            <div class="t">
+                                <p>5+ </p>
+                                <p>Years Of Expirence</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="second-overview"></div>
+                </div>
+                <img class="resize-office-image"
+                    src="https://images.adsttc.com/media/images/5e66/5e5e/b357/65bd/db00/0025/large_jpg/10.jpg?1583767123"
+                    alt="">
+
+            </div>
+
         </section>
 
     </div>
@@ -448,7 +489,6 @@ function refreshPage() {
 .mobile-nav :hover {
     color: rgb(75, 192, 217);
 }
-
 
 
 a {
@@ -566,12 +606,12 @@ a {
 
 .nice-text {
     border: 1px solid white;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
-    width: 150px;
+    width: 120px;
     padding: 10px;
     text-align: center;
-    border-radius: 75px;
+    border-radius: 60px;
     cursor: pointer;
 }
 
@@ -592,8 +632,8 @@ a {
 .third-containter {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
+    // gap: 20px;
+    padding: 40px;
 
 }
 
@@ -606,8 +646,8 @@ a {
 .support-container {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 
-    // gap: 60px;
 }
 
 .tnh-zone {
@@ -618,7 +658,6 @@ a {
 .tnh-images {}
 
 .tnh-images-resize {
-    width: 570px;
     height: 400px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -626,25 +665,23 @@ a {
 }
 
 .tnh-text {
-
-    padding: 20px;
+    padding: 15px;
     background-color: black;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 400px;
-    width: 450px;
 
 }
 
 .tnh-header-text {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     padding: 10px;
 
 }
 
 .tnh-header-subtext {
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     padding: 10px;
     line-height: 20px;
@@ -659,8 +696,8 @@ a {
 
 .ixh-images {
 
-   background-color:rgb(232, 237, 223);
-   border-top-left-radius: 20px;
+    background-color: rgb(232, 237, 223);
+    border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
@@ -698,14 +735,14 @@ a {
 }
 
 .ixh-header-text {
-    font-size: 20px;
+    font-size: 18px;
     color: black;
     padding: 5px;
 
 }
 
 .ixh-header-subtext {
-    font-size: 14px;
+    font-size: 12px;
     color: black;
     padding: 5px;
     line-height: 20px;
@@ -714,11 +751,72 @@ a {
 /*four*/
 .fourth-containter {
     display: flex;
-    padding: 30px;
+    padding: 40px;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+/*five*/
+.five {}
+
+.fifth-container {
+    position: relative;
+    height: 100vh;
+}
+
+.resize-office-image {
+    height: 100%;
+    width: 100%;
+
+}
+
+.blurr-content-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    background-color: rgba(64, 6, 131, 0.8);
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+
+}
+
+.first-overview {
+    display: flex;
+    border: 1px solid red;
     justify-content: space-between;
 }
 
+.sec-sub-core-exp {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 55, 255);
+    
 
+}
+
+.icon-resize {
+    border: 1px solid rgb(9, 255, 0);
+    align-content: center;
+    height: 180px;
+    width: 200px;
+}
+
+.t {
+    border: 1px solid green;
+    color: white;
+    text-align: center;
+
+}
+
+
+
+.second-overview {
+    border: 1px solid red;
+    padding: 100px;
+}
 
 
 
