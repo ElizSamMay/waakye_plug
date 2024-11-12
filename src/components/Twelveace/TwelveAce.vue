@@ -200,7 +200,7 @@ function refreshPage() {
             <div class="third-containter">
 
                 <div class="edit-subfs">
-                    SUBSIDIARIES FOCUS
+                    SECTOR OF OPERATION
                 </div>
 
                 <div class="support-container">
@@ -401,16 +401,57 @@ function refreshPage() {
 
                     </div>
 
-                    <div class="second-overview"></div>
+                    <div class="second-overview">
+                        <div class="sec-sub-core-exp">
+                            <p class="year-of-establish">2024</p>
+                            <div class="t">
+                                <p>where the story </p>
+                                <p>begings</p>
+                            </div>
+                        </div>
+
+                        <div class="sec-sub-core-exp">
+                            <p class="year-of-establish">300+</p>
+                            <div class="t">
+                                <p> employees across 16 regions </p>
+                                <p>in Ghana</p>
+                            </div>
+                        </div>
+
+                        <div class="sec-sub-core-exp">
+                            <p class="year-of-establish">80%</p>
+                            <div class="t">
+                                <p>of our employee </p>
+                                <p>are Centennials</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="sec-sub-core-exp">
+                            <p class="year-of-establish">6500+</p>
+                            <div class="t">
+                                <p>clients in ghana</p>
+                                <p>and africa</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <img class="resize-office-image"
                     src="https://images.adsttc.com/media/images/5e66/5e5e/b357/65bd/db00/0025/large_jpg/10.jpg?1583767123"
                     alt="">
 
             </div>
-
         </section>
 
+        <section class="six">
+            <div class="sixth-containter">
+
+                <div class="edit-subfs">
+                    SUBSIDIARIES FOCUS
+                </div>
+            </div>
+        </section>
     </div>
 
 
@@ -776,7 +817,7 @@ a {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    background-color: rgba(64, 6, 131, 0.8);
+    background-color: rgba(0, 64, 49, 0.7);
     width: 100%;
     height: 100%;
     padding: 100px;
@@ -785,38 +826,51 @@ a {
 
 .first-overview {
     display: flex;
-    border: 1px solid red;
     justify-content: space-between;
 }
 
 .sec-sub-core-exp {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(0, 55, 255);
-    
 
 }
 
 .icon-resize {
-    border: 1px solid rgb(9, 255, 0);
     align-content: center;
     height: 180px;
     width: 200px;
 }
 
 .t {
-    border: 1px solid green;
+    font-weight: 700;
     color: white;
     text-align: center;
-
 }
 
 
 
 .second-overview {
-    border: 1px solid red;
-    padding: 100px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.year-of-establish {
+    color: yellow;
+    font-weight: bolder;
+    font-size: 80px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
