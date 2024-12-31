@@ -215,21 +215,20 @@ function refreshPage() {
                             </p>
 
                             <p class="tnh-header-text">
-                                Best In Animal Care, Foods and Manufacturing
+                                Construction Services & Real Estate Development.
                             </p>
 
                             <p class="tnh-header-subtext">
-                                The Next Habitat is everything Veterinary, that keeps both Pet and Food animals in
-                                shape.
-                                There are a series of work sites that come in common to make a whole, we have the Animal
-                                Farms
+                                Construction Services and Real Estate Development transform raw land into
+                                valuable properties, driving economic growth and urban development.
                             </p>
                         </div>
                     </div>
+
                     <div class="ixh-zone">
                         <div class="ixh-images">
                             <img class="ixh-images-resize"
-                                src="https://traveltimeafrica.com/ourblog/wp-content/uploads/2021/04/IMG_3314.jpg">
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZViLikJciEFXRWqbu2SPYcIOvqnQkVCT27A&s">
                         </div>
 
                         <div class="ixh-text">
@@ -238,14 +237,14 @@ function refreshPage() {
                             </p>
 
                             <p class="ixh-header-text">
-                                Find Our Fancy Restaurant On the Globle
+                                Veterinary & Agriculture
                             </p>
 
                             <p class="ixh-header-subtext">
-                                9th hour Restaurants is a food center where all kinds of dishes can be found there
-                                including Our African foods and the Continental foods.
-                                9th restaurant consists of different types of Restaurants from all around the
-                                world.
+
+                                Veterinary and Agriculture ensure the health and productivity of animals and
+                                crops, contributing to global food security and sustainability.
+
                             </p>
 
 
@@ -263,7 +262,7 @@ function refreshPage() {
                 <div class="ixh-zone">
                     <div class="ixh-images">
                         <img class="ixh-images-resize"
-                            src="https://waterslide.net/wp-content/uploads/2021/11/Darwin-Waterslide-Project-2560x1280-1-1024x512.jpg">
+                            src="https://eu-images.contentstack.com/v3/assets/blt73dfd92ee49f59a6/blt58adfd0056d25209/6706a0564753a00605bd0535/1200%D1%85675-6.png">
                     </div>
 
                     <div class="ixh-text">
@@ -272,13 +271,13 @@ function refreshPage() {
                         </p>
 
                         <p class="ixh-header-text">
-                            Where fun meets fitness and community thrives!
+                            Finance & Forex
                         </p>
 
                         <p class="ixh-header-subtext">
-                            Pace Recreation Center is a event center where meetings are held, sports are
-                            organized and Games are played.Social activities, Camping and outdoor activities, Arts and
-                            crafts activities are also engaged.
+
+                            Finance & Forex facilitate global trade, investment, and economic growth, enabling
+                            individuals and organizations to manage financial risks and opportunities.
 
                         </p>
 
@@ -298,14 +297,13 @@ function refreshPage() {
                         </p>
 
                         <p class="ixh-header-text">
-                            Your order, our priority!
+                            Logistics
                         </p>
 
                         <p class="ixh-header-subtext">
-                            Global Point Delivery Services is to fulfill the requests of Peoples items to be delivered,
-                            which involves the pickup of any item from any location and the delivery of these items with
-                            the use of various modes of transportation; Motor Bikes, Vehicles & Drones to a location
-                            chosen by the customer.
+                            Delivery Services refer to companies or organizations that transport goods, packages, or
+                            products from one location to another, ensuring timely and secure delivery to customers.
+                            This includes services like courier services, parcel delivery, logistics, and shipping.
                         </p>
 
 
@@ -347,7 +345,7 @@ function refreshPage() {
                         </p>
 
                         <p class="ixh-header-text">
-                            Efficient energy, endless possibilities!
+                            Oil & Gas
                         </p>
 
                         <p class="ixh-header-subtext">
@@ -449,6 +447,24 @@ function refreshPage() {
 
                 <div class="edit-subfs">
                     SUBSIDIARIES FOCUS
+                </div>
+
+                <div class="container">
+                    <div class="child-container">
+                        <img class="resize-iconchild" src="../../assets/images/Section 2.png">
+                    </div>
+                    <div class="child-container">
+
+                    </div>
+                    <div class="child-container">
+
+                    </div>
+                    <div class="child-container">
+
+                    </div>
+                    <div class="child-container">
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -859,6 +875,22 @@ a {
     font-weight: bolder;
     font-size: 80px;
     padding: 20px;
+}
+
+/*six*/
+.container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+   
+}
+.child-container{
+    border: 1px solid black;
+    // padding: 100px;
+}
+.resize-iconchild{
+height:400px;
+width:400px;
 }
 
 
