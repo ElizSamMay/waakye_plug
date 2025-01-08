@@ -451,22 +451,56 @@ function refreshPage() {
 
                 <div class="container">
                     <div class="child-container">
-                        <img class="resize-iconchild" src="../../assets/images/Section 2.png">
+                        <img class="resize-iconchild" src="../../assets/images/group19.png">
                     </div>
                     <div class="child-container">
-
+                        <img class="resize-iconchild" src="../../assets/images/group27.png">
                     </div>
                     <div class="child-container">
-
+                        <img class="resize-iconchild" src="../../assets/images/group43.png">
                     </div>
                     <div class="child-container">
-
+                        <img class="resize-iconchild" src="../../assets/images/group17.png">
                     </div>
                     <div class="child-container">
-
+                        <img class="resize-iconchild" src="../../assets/images/group4.png">
                     </div>
                 </div>
             </div>
+            <p class="edit-subfs">Partners you can trust</p>
+            <div class="child-container">
+                <img class="resize-iconchild" src="../../assets/images/luminaea.jpeg">
+            </div>
+        </section>
+
+
+        <section class="seven">
+            <div class="seventh-container">
+                <div class="blurr-content-picture">
+
+
+
+                </div>
+                <img class="resize-office-image"
+                    src="https://initube.es/wp-content/uploads/2023/01/industria-sostenible-1024x616.png" alt="">
+
+            </div>
+            <div class="cvs-ot-reach-us">
+                <div class="cvs">
+                    <p>We are looking forward to work with you </p>
+                    <p class="button">Submit your Curriculum vitae</p>
+                </div>
+
+                <div class="reach-us">
+                    <p>We are optimists who love to work together</p>
+                    <p class="button1">Talk to us</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="eight">
+
         </section>
     </div>
 
@@ -881,16 +915,72 @@ a {
 .container {
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
-   
+    // border: 1px solid black;
+
 }
-.child-container{
-    border: 1px solid black;
-    // padding: 100px;
+
+.child-container {
+    // border: 1px solid black;
+    padding: 20px;
+    background-color: rgba(172, 255, 5, 0.1);
+    border-radius: 5px;
 }
-.resize-iconchild{
-height:400px;
-width:400px;
+
+.resize-iconchild {
+    height: 150px;
+    width: 200px;
+}
+
+/*seven*/
+.seventh-container {
+    position: relative;
+    height: 100vh;
+}
+
+.resize-office-image {
+    height: 100%;
+    width: 100%;
+
+}
+
+.blurr-content-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    background-color: rgba(0, 64, 49, 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+
+}
+
+.cvs-ot-reach-us {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cvs,
+.reach-us {
+    padding: 50px;
+}
+
+.button {
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.button1 {
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: rgb(183, 7, 7);
+    color: white;
+    cursor: pointer;
 }
 
 
